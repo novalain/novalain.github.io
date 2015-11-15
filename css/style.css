@@ -1,0 +1,154 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 400px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+p.speech:before
+{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 30px;
+  top: 100px;
+  border: 23px solid;
+  border-color: #4db6ac  transparent transparent #4db6ac ;
+}
+
+p.speech:after
+{
+  content: '';
+  color:black;
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 34px;
+  top: 100px;
+  border: 18px solid;
+  border-color: #fff transparent transparent #fff;
+}
+
+p.speech
+{
+
+  color:#666;
+  float:right;
+  position: relative;
+  width: 170px;
+  text-align: center;
+  line-height: 100px;
+  background-color: #fff;
+  border: 5px solid #4db6ac ; /*#666*/
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: 2px 2px 4px #888;
+  -moz-box-shadow: 2px 2px 4px #888;
+  box-shadow: 2px 2px 4px #888;
+}
+
+p.thought
+{
+  position: relative;
+  width: 130px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background-color: #fff;
+  border: 8px solid #666;
+  -webkit-border-radius: 58px;
+  -moz-border-radius: 58px;
+  border-radius: 58px;
+  -webkit-box-shadow: 2px 2px 4px #888;
+  -moz-box-shadow: 2px 2px 4px #888;
+  box-shadow: 2px 2px 4px #888;
+}
+
+p.thought:before, p.thought:after
+{
+  left: 10px;
+  top: 70px;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 8px solid #666;
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  border-radius: 28px;
+}
+
+p.thought:after
+{
+  width: 30px;
+  height: 20px;
+  left: 5px;
+  top: 100px;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  border-radius: 18px;
+}
+
+
+.github{
+
+  padding-top:5px;
+  height:35px;
+
+
+}
+
+
+
