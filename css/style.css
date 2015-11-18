@@ -20,7 +20,7 @@ p {
 }
 
 .parallax-container {
-  min-height: 400px;
+  min-height: 600px;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
@@ -65,7 +65,7 @@ p.speech:before
   left: 30px;
   top: 100px;
   border: 23px solid;
-  border-color: #4db6ac  transparent transparent #4db6ac ;
+  border-color: #26a69a  transparent transparent #26a69a;
 }
 
 p.speech:after
@@ -91,7 +91,7 @@ p.speech
   text-align: center;
   line-height: 100px;
   background-color: #fff;
-  border: 5px solid #4db6ac ; /*#666*/
+  border: 5px solid #26a69a; /*#666*/
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
@@ -140,15 +140,279 @@ p.thought:after
   -moz-border-radius: 18px;
   border-radius: 18px;
 }
-
+/*
 
 .github{
-
   padding-top:5px;
   height:35px;
+  
+}
 
+
+.play{
+  padding-top:5px;
+  height:35px;
+  
+}
+
+
+.github:hover{
+
+  background:blue;
+
+}
+*()
+
+*/
+
+.card-title{
+
+  font-size:1.3em !important;
 
 }
 
 
+/* Social */
+
+.icon-social {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  margin: 4px;
+  width: 96px;
+  height: 96px;
+  font-size: 0;
+  text-indent: -9999px;
+}
+
+.zoomed { zoom: 0.5; -moz-transform: scale(0.5); }
+
+.icon-mono {
+  background: url("../.img/social/icons1.png");
+  background-image: url("../img/social/icons1.svg"), none;
+  background-color: #595959;
+  -webkit-transition: background 0.3s;
+          transition: background 0.3s;
+}
+
+/* facebook */
+.icon-mono.facebook {
+  background-position: 0 0;
+}
+
+.icon-mono.facebook:hover {
+  background-color: #3b5998;
+  background-position: 0 -96px;
+}
+
+/* twitter */
+.icon-mono.twitter {
+  background-position: -96px 0;
+}
+
+.icon-mono.twitter:hover {
+  background-color: #4099ff;
+  background-position: -96px -96px;
+}
+
+/* google plus */
+.icon-mono.googleplus {
+  background-position: -192px 0;
+}
+
+.icon-mono.googleplus:hover {
+  background-color: #d34836;
+  background-position: -192px -96px;
+}
+
+/* github */
+.icon-mono.github {
+  background-position: -288px 0;
+}
+
+.icon-mono.github:hover {
+  background-color: #333333;
+  background-position: -288px -96px;
+}
+
+/* rss */
+.icon-mono.rss {
+  background-position: -384px 0;
+}
+
+.icon-mono.rss:hover {
+  background-color: #ee802f;
+  background-position: -384px -96px;
+}
+
+
+/*OTHER SOCIAL */
+
+@font-face {
+    font-family: 'si';
+    src: url('../img/social/socicon.eot');
+    src: url('../img/social/socicon.eot?#iefix') format('embedded-opentype'),
+         url('../img/social/socicon.woff') format('woff'),
+         url('../img/social/socicon.ttf') format('truetype'),
+         url('../img/social/socicon.svg#icomoonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+ 
+}
+ 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family:si;
+        src: url(../img/social/socicon.svg) format(svg);
+    }
+}
+
+.soc {
+    overflow:hidden;
+    margin:0; padding:0;
+    list-style:none;
+
+}
+
+.soc li {
+    display:inline-block;
+    *display:inline;
+    zoom:1;
+}
+
+.soc li a {
+    font-family:si!important;
+    font-style:normal;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    box-sizing:border-box;
+
+    -o-transition:.1s;
+    -ms-transition:.1s;
+    -moz-transition:.1s;
+    -webkit-transition:.1s;
+    transition:.1s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+
+    overflow:hidden;
+    text-decoration:none;
+    text-align:center;
+    display:block;
+    position: relative;
+    z-index: 1;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin-right: 0px;
+    color: #ffffff;
+    background-color: #454545;
+
+    
+    
+    cursor:pointer;
+
+}
+
+.soc a:hover {
+    z-index: 2;
+    background-color:#313131 !important;
+
+}
+
+.soc-icon-last{
+    margin:0 !important;
+}
+
+.soc-github:before {
+    content:'Q';
+
+}
+.soc-linkedin:before {
+    content:'j';
+}
+.soc-facebook:before {
+    content:'b';
+}
+.soc-instagram:before {
+    content:'x';
+}
+.soc-twitter:before {
+    content:'a';
+}
+.soc-youtube:before {
+    content:'r';
+}
+
+.soc-play:before {
+    content:'L';
+}
+
+/* Colours 
+.soc-github {
+    background-color: #5380c0;
+}
+.soc-github:before {
+    content:'Q';
+}
+.soc-linkedin {
+    background-color: #3371b7;
+}
+.soc-linkedin:before {
+    content:'j';
+}
+.soc-facebook {
+    background-color: #3e5b98;
+}
+.soc-facebook:before {
+    content:'b';
+}
+.soc-instagram {
+    background-color: #9c7c6e;
+}
+.soc-instagram:before {
+    content:'x';
+}
+.soc-twitter {
+    background-color: #4da7de;
+}
+.soc-twitter:before {
+    content:'a';
+}
+.soc-youtube {
+    background-color: #e02a20;
+}
+.soc-youtube:before {
+    content:'r';
+}
+
+.soc-github:hover {
+    background-color: #3f6cac;
+}
+.soc-linkedin:hover {
+    background-color: #1f5da3;
+}
+.soc-facebook:hover {
+    background-color: #2a4784;
+}
+.soc-instagram:hover {
+    background-color: #88685a;
+}
+.soc-twitter:hover {
+    background-color: #3993ca;
+}
+.soc-youtube:hover
+
+*/
 
