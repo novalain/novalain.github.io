@@ -1,0 +1,67 @@
+
+.arrow-img{
+	content:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB7UlEQVRYR+2VMVLCQBSG/6fCDDR6A+OMoZUbCDfQklAIhWGsPIJ6AzuHNGBBLPUG4A2gJcyIN9BGZ4j6nE2IhiUJq4g0bAdJ9v/e//b9S1jyoiXrYwWwcoC0myttg9e3B4Z5/58Hcte29t/o/ZFydv0BII0ZTadsVv8DQm9ZDSJUAB4KgC5Ae54w80W/XDtfJIRuW5cEnPoa3PNakOK1LoE2fQZUnbLZXASE3rIqRGh4OuBnN5PWvCnQW1YexJ1FQsjiYCo4ZbP7NYYyxAdRcVA67vyFEzm7fgDQbVB5IC5+T+TAxIuMJwBFQTkPhFcY0CbClthHLmwqiCasmhNCFo86X5FJKEO42dTO8LAqHFFe2m1jK/XiPgSVxx3u2CgOjwszum42VVSFGIsL24X9ieOdeBfodr1JoKPxeCpByOIMvnaMWiXOupmX0QQE0HEMs5jUB9222gQUxic+UXxqCuI2DqdlUmR/R6yfcn2j5rcgYc10QHwrbE2/jjpBZEdByOKjTLqgcmaUAKIgwvdGrlU/B9GZXyj3VMWVWxA4GBXZ3ibhfKeP/LB0MpxlffBc2YE4iOB/cbmEI3ZhAGLjKSd+Kf7jFoSrCqclwId9o3anWnX4vR+3QILwxmyeC2sugN9ULH+zAlg5sHQHPgFdAwqlXyCIdQAAAABJRU5ErkJggg==');
+
+}
+
+/*white*/
+/*
+content:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADIUlEQVR4Xu2a7XnTQBCEdyuADkgHQAVAB6QCSAVABUAF4ApIKoBUQKiA0AGpgFDB8Iw5+ZFlnXYln06WdPdTX9a8mtXNnqyy8qEr1y8FQHHAygmUEli5AcpLsJRAKYGVEyglsHID/J8FALwSkecicquqmyVDAfBGRJ6IyI2qXimAzyLCjdX4pqrnS4QA4Ht40JW8DQH8EZGHDcGXqnqxJAgAvojI64amewL4LSKPWsQuBkJEPCXfEcBLEfkaedrvVJUlMtsB4IOIvI8IOK9egl0HXajq5RwJAKDlaf22sdW1ywEAKJKzQfTgOUEwxF+p6vZ9sBeEDAhPVfV2DhAAcJr7GbnXnfgDANwA4EZEnrWcfC8iL04dQhDP6a45s1HSnvgYAJ5ICI/nBsEQ/4sZQFX5IHejtRcA0AWB0ybLYe9CU5dGuGfa/qzlXlrFtzqgOhkAL8Saf9ByQW5nOZwEhCCetmftN8cdt8futbMbDJZiOZwsBEP832D76MvbbIcNCJOnRQAMcQxzzWGK7yyB+tWMtDgZhI6Iy9t3TdumA2rvhK5UlR2CId6dXt0AQkYwo2WO2QDAWxH5FPktt3h3CTTKobl+UN/d68eHwDIibu/mrZcDauUwSd/gzfd9wA4CEMohBmGUyNwn32cBECBwfh09MhsR91pV26ZBF4fBDggARu8bhuR7l/Jw0FEAHBCOisxD831WAAFC8r7BEXHPUvQiRzugNjNs19pT9A0O8WxrkyzOJAMQnNAFwZ0WO1KeK99nL4GUfYMRcdmC02XJRlIHOPuGjaoyyh6MVPm+D51RAIRy6NU3eJaw+wjzHjsagADB1TcY4j+qKr9bjDJGBWBEZu7mR1iGqdjHi4NV3NQURgdgQKjWFF1L2KnF83q5AHRF5jZdP1SV/1cYfWQBEFzghRBdwh6DRjYATghZxWcrgfqT61hlZspLku/7OCWrA2pBifXNDxn1kTzleUBMAiCUAyFUf1lhn5A04nrET1IC3hvLddxkDsgl0PqdAsAitPT9xQFLf8KWvuIAi9DS9xcHLP0JW/qKAyxCS9+/egf8AzB5bPOaDqlPAAAAAElFTkSuQmCC');
+*/
+.arrow {
+	zoom:0.6;
+	position: absolute;
+	z-index:-1;
+	bottom: 0;
+	left: 50%;
+	margin-left:-20px;
+	padding-bottom:10px;
+}
+
+.bounce {
+	-webkit-animation-name: bounce;
+	-moz-animation-name: bounce;
+	-o-animation-name: bounce;
+	animation-name: bounce;
+}
+
+.animated{
+	-webkit-animation-fill-mode:both;
+	-moz-animation-fill-mode:both;
+	-ms-animation-fill-mode:both;
+	-o-animation-fill-mode:both;
+
+    animation-iteration-count: infinite;
+   -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+
+	animation-fill-mode:both;
+	-webkit-animation-duration:2s;
+	-moz-animation-duration:2s;
+	-ms-animation-duration:2s;
+	-o-animation-duration:2s;
+	animation-duration:2s;
+}
+
+
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	40% {-webkit-transform: translateY(-30px);}
+	60% {-webkit-transform: translateY(-15px);}
+}
+
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(-30px);}
+	60% {-moz-transform: translateY(-15px);}
+}
+
+@-o-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+	40% {-o-transform: translateY(-30px);}
+	60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}

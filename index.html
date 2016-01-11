@@ -9,281 +9,415 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/arrow.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
 <body>
-  <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-      <a style="font-size:1.5em; font-weight:200;" id="logo-container" href="#" class="brand-logo"> Michael Novén
-        </a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#about">About</a>
-        </li>
-        <li><a href="#projects">Projects</a>
-        </li>
-        <li><a href="#contact">Contact</a>
-        </li>
-        <li><a href="#contact">Blog</a>
-        </li>
-      </ul>
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#about">About</a>
-        </li>
-        <li><a href="#projects">Projects</a>
-        </li>
-        <li><a href="#contact">Contact</a>
-        </li>
-        <li><a href="#contact">Blog</a>
-        </li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <!--<div class="row center ">
-            <!-- <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5> 
-            
-            
-            </div>-->
-        <!--    <div class="row center">
-            <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
-            </div> -->
-      </div>
-    </div>
-    <div style="top:150px; width:350px;position:absolute; margin-left:auto;margin-right:auto; left:0; right:0; ">
-      <!-- <div style="float:left;"> -->
-         <!--  <h1 style="text-align:center;font-weight:200; font-size:4.5em;"class=" teal-text text-lighten-2">Hello</h1>
-          <p style="color:white;font-size:1.6em;line-height:0px;font-weight:300;text-align:center;">I like design and code</p> -->
-          <!-- </div> -->
-      <p style="font-size:0.9em;" class="speech">Code, Games & Design
-        <br>
-      </p>
-    </div>
-    <div class="parallax"><img src="img/bg_cartoon.png" alt="Unsplashed background img 1">
-    </div>
-  </div>
 
-
-  <div class="container">
-    <div id="about" class="section">
-      <!--   Icon Section   -->
-      <div class="row">
-        <!-- <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4 style="font-weight:200;">What am I doing?</h4>
-        </div> -->
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <!-- <i class="material-icons">flash_on</i></h2> -->
-            <h2 style="line-height:0;" class="center brown-text">
-                <img class="center"style="height:80px;"src="img/nus.jpg"/>
-              </h2>
-            <!-- <h6 class="center">Augusti 2015 - Maj 2016</h6> -->
-            <p class="light center">Studying my first year of my masters degree at the National University of Singapore</p>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <!-- <h2 class="center brown-text"><i class="material-icons">group</i></h2> -->
-            <h2 style="line-height:0;" class="center brown-text">
-                <img class="center"style="height:80px;"src="img/mbs.jpg"/>
-              </h2>
-            <p class="light center">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 style="line-height:0;" class="center brown-text">
-                <img class="center" style="height:80px;"src="img/liu.png"/>
-              </h2>
-            <!-- <h5 class="center">Easy to work with</h5> -->
-            <p class="light center">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
+  <div class="se-pre-con">
+      <div id="loading-container">
+         <p id="loading-text">hold on ...</p>
+         <div class="progress">
+            <div class="indeterminate"></div>
         </div>
       </div>
     </div>
+  </div> 
+
+  <div class="navbar-fixed">
+    <nav id="main-nav" class="no-shadow" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="http://www.michaelnoven.se" class="brand-logo header-name"> Michael Novén
+          </a>
+        <ul class="right hide-on-med-and-down">
+          <li><a class="nav-link" href="#about">About</a>
+          </li>
+          <li><a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li><a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li><a class="nav-link" target="_blank" href="http://www.singapore.michaelnoven.se">Blog</a>
+          </li>
+        </ul>
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="#about">About</a>
+          </li>
+          <li><a href="#projects">Projects</a>
+          </li>
+          <li><a href="#contact">Contact</a>
+          </li>
+          <li><a target="_blank" href="http://www.singapore.michaelnoven.se">Blog</a>
+          </li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i id="menu-button" class="material-icons">menu</i></a>
+      </div>
+    </nav>
   </div>
 
 
+  <div style="top:-65px;" id="index-banner" class="parallax-container valign-wrapper">
+    <div class="parallax"><img src="img/blackwhite3.jpg">
+    </div>
+  </div>
 
+  <div id="front-text-container">
+    <h2 id="front-text-1" class=" white-text text-lighten-2">Hello</h2>
+    <p id="front-text-2" class=" white-text text-lighten-2">I like games, code and design</p>
+  </div>
+
+  <div class="arrow animated bounce">
+    <img width="40" height="40" alt="" class="arrow-img" src="" />
+  </div>
+  </div>
+
+  <!-- first info section-->
+  <div id="section-1">
+    <div class="container">
+      <div id="about" class="section">
+        <div class="row">
+          <div class="col s12 center">
+            <h4 class="header-in-section">Welcome</h4>
+            <p>I am a media technology student from Gothenburg in Sweden
+              <br/> with a huge passion for game development and computer graphics</p>
+          </div>
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <!-- <i class="material-icons">flash_on</i></h2> -->
+              <h2 style="line-height:0;" class="center brown-text">
+                              <img class="center"style="height:70px;"src="img/nus.png"/>
+                            </h2>
+              <!-- <h6 class="center">Augusti 2015 - Maj 2016</h6> -->
+              <p class="light center">Studying my first year of my masters degree at the National University of Singapore.</p>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <!-- <h2 class="center brown-text"><i class="material-icons">group</i></h2> -->
+              <h2 style="line-height:0;" class="center brown-text">
+                  <img class="center"style="height:70px;"src="img/mbs.png"/>
+                </h2>
+              <p class="light center">Worked as a software developer during the summer 2015 at Mobile Storytelling in central Gothenburg. My job was mainly focused on developing hybrid apps for Android and iOS. </p>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 style="line-height:0;" class="center brown-text">
+                  <img class="center" style="height:70px;"src="img/liu.png"/>
+                </h2>
+              <!-- <h5 class="center">Easy to work with</h5> -->
+              <p class="light center">Currently pursuing my Master of Science in Media Technology and Engineering at Linköping University with focus on Computer Graphics and Game Development.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- second image -->
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
-      <div class="container">
+      <!-- <div class="container">
         <div class="row center">
           <h5 class="header col s12 light">Download CV?</h5>
         </div>
         <div class="row center">
           <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Yes!</a>
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="parallax"><img src="img/snd.jpg" alt="Unsplashed background img 2">
     </div>
-  </div>-->
-
-
-
-  <div class="container">
-    <div id="projects" class="section">
-      <div class="row">
-        <div class="col s12 center">
-          <!-- <h3><i class="mdi-content-send brown-text"></i></h3> -->
-          <h4 style="font-weight:200;">Some stuff I've done</h4>
-          <!-- <a href="#" class="icon-social icon-mono facebook zoomed">facebook</a>
-          <a href="#" class="icon-social icon-mono twitter">twitter</a>
-          <a href="#" class="icon-social icon-mono googleplus">google+</a>
-          <a href="#" class="icon-social icon-mono github">github</a>
-          <a href="#" class="icon-social icon-mono rss">rss</a> -->
-        </div>
-
-        
-        <div class="col s12 m6 l4">
-          <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="img/projects/green-village.jpg">
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Green Village<i class="material-icons right">more_vert</i></span>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-              <p>Here is some more information about this product that is only revealed once clicked on.</p>
-
-              <ul class="soc">
-<!--                 <li><a class="soc-github" href="#"></a></li>
-                <li><a class="soc-youtube" href="#"></a></li> -->
-                <li><a class="soc-play soc-icon-last" href="#"></a></li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col s12 m6 l4 ">
-          <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="img/projects/varsom.jpg">
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Varsom Games<i class="material-icons right">more_vert</i></span>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-              <p>Here is some more information about this product that onsome more information about this product that is only revealed once clicked onssdasdaadsa</p>
-            </div>
-          </div>
-        </div>
-
-        
-        <div class="col s12 m6 l4 ">
-          <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="img/projects/fluid.jpg">
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Apptit<i class="material-icons right">more_vert</i></span>
-              <p>
-
-
-              </p>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-              <p>An application about cooking recipes with focus on lunchboxes for students. The idea is to create simple recipes that are quick to cook and can stay in the fridge or freezer for some time. The users can also add their own recipes in the app and save them.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m6 l4 ">
-          <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="img/projects/apptit.jpg">
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Apptit<i class="material-icons right">more_vert</i></span>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-              <p>An application about cooking recipes with focus on lunchboxes for students. The users can add their own recipes in the app and save them.</p>
-
-              <ul class="soc">
-                <li><a class="soc-github soc-icon-last" href="#"></a></li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col s12 m6 l4 ">
-          <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="img/projects/torretz.jpg">
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Apptit<i class="material-icons right">more_vert</i></span>
-              <p>
-              </p>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-              <p>Here is some more information about this product that is only revealed once clicked on.some more information about this product that is only revealed once clicked onsome more information about this product that is only revealed once clicked onssdasdaadsa</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m6 l4 ">
-          <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="img/projects/fft.jpg">
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Apptit<i class="material-icons right">more_vert</i></span>
-              <p>
-              </p>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-              <p>Here is some more information about this product that is only revealed once clicked on.some more information about this product that is only revealed once clicked onsome more information about this product that is only revealed once clicked onssdasdaadsa</p>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
   </div>
-   <!-- <div class="parallax-container valign-wrapper">
-      <div class="section no-pad-bot">
-        <div class="container">
-          <div class="row center">
-            <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+
+  <!-- portfolio section -->
+  <div id="section-2">
+    <div class="container">
+      <div id="projects" class="section">
+        <div class="row">
+          <div class="col s12 center">
+            <!-- <h3><i class="mdi-content-send brown-text"></i></h3> -->
+            <h4 class="header-in-section">Stuff I've done</h4>
+            <p>Check it out! Visit my Github for more details on the projects</p>
           </div>
-        </div>
-      </div>
-      <div class="parallax"><img src="img/bg2.jpg" alt="Unsplashed background img 3"></div>
-      </div> -->
-  
-        <footer class="page-footer brown lighten-1 ">
-          <div class="container">
-            <div class="row">
-              <div class="col s12">
-                <h5 style="font-weight:100;"class="white-text">Interested?</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+
+          <div class="col s12 m6 l4">
+            <div class="card ">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="img/projects/ocaml.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">mOOL Compiler <i class="material-icons right">more_vert</i></span>
+                <ul class="soc">
+                  <li>
+                    <a class="soc-github soc-icon-last" target="_blank" href="https://github.com/novalain/mOOL-compiler"></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                <span class="year">2015</span>
+                <p class="card-text">A compiler written in OCaml for the language mOOL, made in the module CS4212, Compiler Design. The phases implemented was; Lexical, Syntax and Semantic analysis, Intermediate Code Generation, Code Optimization and Code Generation. The result became a working compiler for a light version mOOL where class inheritance is missing. </p>
+                <ul>
+                  <div class="chip">ocaml</div>
+                  <div class="chip">functional-programming</div>
+                  <div class="chip">regex</div>
+                </ul>
+
               </div>
             </div>
           </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © Michael Novén
-            <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div> -->
+
+          <div class="col s12 m6 l4">
+            <div class="card ">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="img/projects/green-village.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Green Village<i class="material-icons right">more_vert</i></span>
+                <ul class="soc">
+                  <li>
+                    <a class="soc-play soc-icon-last" target="_blank" href="https://play.google.com/store/apps/details?id=se.mobilestorytelling.green_village&hl=sv"></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                <span class="year">2015</span>
+                <p class="card-text">An app I made during my time at Mobile Storytelling for people living in the residential area Green Village. The residents can see the next incoming bus or train and see the current weather in the area. They can also control their audio speakers and lights at home wirelessly through the app. I also built the backend part for the users to be able to log in.</p>
+                <ul>
+                  <div class="chip">angularjs</div>
+                  <div class="chip">html</div>
+                  <div class="chip">php</div>
+                </ul>
+              </div>
+            </div>
           </div>
-        </footer>
-  <!-- Scripts -->
+
+          <div class="col s12 m6 l4 ">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="img/projects/varsom-krazy-3.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Varsom Games<i class="material-icons right">more_vert</i></span>
+                <ul class="soc">
+                  <li>
+                    <a class="soc-github soc-icon-last" target="_blank" href="https://github.com/novalain/Varsom-Games"></a>
+                  </li>
+                  <li>
+                    <a class="soc-play soc-icon-last" target="_blank" href="https://play.google.com/store/apps/details?id=com.varsom.system.android&hl=sv"></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                <span class="year">2015</span>
+                <p class="card-text">
+                  The aim of this project was to develop a framework with the purpose of making players hook together and play video games on a tablet with their smartphones as controllers. We also made a multiplayer car game for Android to illustrate the concept.
+                </p>
+                <ul>
+                  <div class="chip">java</div>
+                  <div class="chip">libgdx</div>
+                  <div class="chip">network-programming</div>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col s12 m6 l4 ">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="img/projects/fluid.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">SPH Fluid Simulation<i class="material-icons right">more_vert</i></span>
+                <ul class="soc">
+                  <li>
+                    <a class="soc-github soc-icon-last" target="_blank" href="https://github.com/RiiQQe/Modelleringsprojekt"></a>
+                  </li>
+                  <li>
+                    <a class="soc-youtube soc-icon-last" target="_blank" href="https://www.youtube.com/watch?v=28wnSENApnk"></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                <span class="year">2015</span>
+                <p class="card-text">A project made in the course TNG022, Modelling and Simulation. This is a real-time fluid simulation in two dimensions using Navier-Stokes in combination with Smoothed Particle Hydrodynamics, rendered and calculated on the GPU using the marching cubes algorithm.</p>
+                <ul>
+                  <div class="chip">c++</div>
+                  <div class="chip">opengl</div>
+                  <div class="chip">opencl</div>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l4 ">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="img/projects/apptit.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Apptit<i class="material-icons right">more_vert</i></span>
+                <ul class="soc">
+                  <li>
+                    <a class="soc-github soc-icon-last" target="_blank" href="https://github.com/novalain/apptit"></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                <span class="year">2014</span>
+                <p>This is a hobby project I made which is an application about cooking recipes with focus on lunchboxes for students. Simple recipes that are quick to cook and can stay in the fridge or freezer for some time. The users can also add their own recipes in the app.</p>
+                <ul>
+                  <div class="chip">ionic</div>
+                  <div class="chip">angularjs</div>
+                  <div class="chip">css</div>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col s12 m6 l4">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="img/projects/prok-gor.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Prokudin-Gorskii<i class="material-icons right">more_vert</i></span>
+                <ul class="soc">
+                  <li>
+                    <a class="soc-github soc-icon-last" target="_blank" href="https://github.com/novalain/Prokudin-Gorskii"></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                <span class="year">2014</span>
+                <p class="card-text">Project done in course TNM087, Image Processing and Analysis. The aim of this project was to colorize images taken by Sergej Prokudin-Gorskij of the russian empire. The project was done in Matlab and techniques such as normalized cross correlation, automatic cropping, color correction and image pyramids was implemented.</p>
+                <ul>
+                  <div class="chip">matlab</div>
+                  <div class="chip">image-processing</div>
+                  <div class="chip">convolution</div>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col s12 m6 l4 ">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="img/projects/torretz.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Space Game<i class="material-icons right">more_vert</i></span>
+                <ul class="soc">
+                  <li>
+                    <a class="soc-github soc-icon-last" target="_blank" href="https://github.com/oankarberg/TNM061-WebGL-3D-Space-Game"></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                <span class="year">2014</span>
+                <p class="card-text">A game we made in the course 3D Computer Graphics, TNM061. An infinite runner kinda game where the ship jumps between platforms and collects coins. The more coins you collect the higher score you get. The top 10 highest scores is saved on the server for everyone to see.</p>
+                <ul>
+                  <div class="chip">webgl</div>
+                  <div class="chip">threejs</div>
+                  <div class="chip">sql</div>
+                  <div class="chip">ajax</div>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l4 ">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="img/projects/fft.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">FFT Guitar Tuner<i class="material-icons right">more_vert</i></span>
+                <ul class="soc">
+                  <li>
+                    <a class="soc-github soc-icon-last" target="_blank" href="https://github.com/oankarberg/Guitar-Tuner-Webapp"></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                <span class="year">2014</span>
+                <p class="card-text">A guitar tuner made in the course TFYA65, Physics of Sound. We developed the guitar tuner as a webapp in HTML5 using WebRTC for real-time communication with the browser and Fast Fourier Transform algorithm for frequency detection. The tuner was first created in Matlab but was then rewritten in Javascript</p>
+                <ul>
+                  <div class="chip">javascript</div>
+                  <div class="chip">matlab</div>
+                  <div class="chip">fft</div>
+                  <div class="chip">frequency-detection</div>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l4 ">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="img/projects/betme.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Betmeapp<i class="material-icons right">more_vert</i></span>
+                <ul class="soc">
+                  <li>
+                    <a class="soc-github soc-icon-last" target="_blank" href="https://github.com/oankarberg/betmeapp"></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                <span class="year">2013</span>
+                <p class="card-text">An application made for betting on everyday activities between friends. All created bets are shown in public as a "feed" and every user can choose what bet to accept. The bet becomes a heads-up between two users and both users has to accept who won the bet when it is finished. This app was made in the course TNM040, Communication and User Interfaces.</p>
+                <ul>
+                  <div class="chip">java</div>
+                  <div class="chip">android</div>
+                  <div class="chip">gui</div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer id="contact" class="page-footer grey lighten-2 ">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h5 id="contact">Contact</h5>
+          <a href="mailto:michael.f.noven@gmail.com"><div style="margin-left:0px !important;" class="email-hover social-slide"></div></a>
+          <a target="_blank" href="https://www.facebook.com/michael.noven.9"><div class="facebook-hover social-slide"></div></a>
+          <a target="_blank" href="https://twitter.com/noveeen"><div class="twitter-hover social-slide"></div></a>
+          <a target="_blank" href="https://www.linkedin.com/in/mnoven"><div class="linkedin-hover social-slide"></div></a>
+          <a target="_blank" href="https://www.instagram.com/novalain/"><div class="instagram-hover social-slide"></div></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © Michael Novén
+      </div>
+    </div>
+  </footer>
+  <!-- scripts -->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>

@@ -1,4 +1,4 @@
-/*!
+  /*!
  * Materialize v0.97.2 (http://materializecss.com)
  * Copyright 2014-2015 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
@@ -5062,7 +5062,7 @@ nav ul a span.badge {
 
 @media only screen and (min-width : 993px) {
   .container {
-    width: 70%; } }
+    width: 85%; } } /*Modified from 70%*/
 
 .container .row {
   margin-left: -0.75rem;
@@ -5213,7 +5213,7 @@ nav ul a span.badge {
         margin-left: 91.66667%; }
       .row .col.offset-m12 {
         margin-left: 100%; } }
-    @media only screen and (min-width : 993px) {
+    @media only screen and (min-width : 993px) { /*993, modified*/
       .row .col.l1 {
         width: 8.33333%;
         margin-left: 0; }
