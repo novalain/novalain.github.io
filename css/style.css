@@ -61,7 +61,8 @@ nav .brand-logo {
     min-height: 0px;
 }
 div#front-text-container {
-    z-index: -1;
+    z-index: 999;
+    opacity:1;
     bottom: 85px;
     position: absolute;
     margin-left: auto;

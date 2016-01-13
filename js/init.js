@@ -17,7 +17,7 @@ $(window).scroll(function() {
 	var scroll = $(window).scrollTop();
 
 	$('.arrow').css({'opacity':( fadeTextThreshold - scroll )/fadeTextThreshold});
-	$('#front-text').css({'opacity':( fadeTextThreshold - scroll )/fadeTextThreshold});
+	$('#front-text-container').css({'opacity':( fadeTextThreshold - scroll )/fadeTextThreshold});
 
 	if(scroll >= windowHeight - bannerHeight){ // Set color
 		$('#main-nav').addClass('colorize-nav');
