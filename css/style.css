@@ -15,7 +15,6 @@
     z-index: 9999;
     background: url(images/loader-64x/Preloader_2.gif) center no-repeat #fff;
 
-    
 
 }
 div#loading-container {
@@ -59,7 +58,9 @@ nav .brand-logo {
 
 #index-banner {
     min-height: 0px;
+    top:-65px;
 }
+
 div#front-text-container {
     z-index: 999;
     opacity:1;
@@ -141,6 +142,17 @@ p {
     #index-banner .section {
         top: 0;
     }
+
+    #index-banner{
+        top:-55px !important;
+    }
+
+    #section-1{
+
+        margin-top:-55px !important;
+
+    }
+
 }
 .icon-block {
     padding: 0 15px;
