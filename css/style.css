@@ -14,10 +14,16 @@
     height: 100%;
     z-index: 9999;
     background: url(images/loader-64x/Preloader_2.gif) center no-repeat #fff;
+
+    
+
 }
 div#loading-container {
-    margin-top: 50vh;
+    
     text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);  
 }
 p#loading-text {
     font-weight: 300;
