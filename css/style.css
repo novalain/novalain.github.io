@@ -1,11 +1,4 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
-
+/* Custom style sheet */
 .se-pre-con {
     position: fixed;
     left: 0px;
@@ -14,11 +7,9 @@
     height: 100%;
     z-index: 9999;
     background: url(images/loader-64x/Preloader_2.gif) center no-repeat #fff;
-
-
 }
+
 div#loading-container {
-    
     text-align: center;
     position: relative;
     top: 50%;
@@ -33,6 +24,7 @@ p#loading-text {
 body {
     background: #f5f5f5;
 }
+
 /*Top banner*/
 
 #main-nav {
@@ -54,6 +46,7 @@ nav .brand-logo {
 .black-links {
     color: #444 !important;
 }
+
 /*Overriding the parallax container*/
 
 #index-banner {
@@ -258,7 +251,8 @@ p.card-text {
 span.year {
     color: #26a69a;
 }
-/*OTHER SOCIAL */
+
+/* SOCIAL */
 
 @font-face {
     font-family: 'si';
@@ -321,7 +315,6 @@ span.year {
     margin-right: 0px;
     color: #ffffff;
     /*background-color: #454545;*/
-    
     cursor: pointer;
 }
 .soc-icon-last {
@@ -363,7 +356,8 @@ span.year {
 .soc-youtube:before {
     content: 'r';
 }
-/*LAST SOCIAL */
+
+/* Social in footer */
 
 .facebook-hover {
     background-image: url('../img/social/facebook-hover.png');
