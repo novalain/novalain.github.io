@@ -38,12 +38,14 @@ $(window).scroll(function() {
 
 $(window).load(function() {
 	// Animate loader off screen
-	$(".se-pre-con").fadeOut("slow");;
+	$(".se-pre-con").fadeOut("slow");
+
 });
 
 // document ready
 (function($){
 
+	//$(document).scrollTop(0);
 	windowHeight = $(window).height();
 
 	$('#index-banner').css('height', $(window).height());
