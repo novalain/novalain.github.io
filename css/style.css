@@ -40,8 +40,9 @@ body {
 }
 nav ul a,
 nav .brand-logo {
-    color: #26a69a;
+    color: white;
     font-size: 1em;
+    font-weight:200;
 }
 .black-links {
     color: #444 !important;
@@ -387,7 +388,7 @@ span.year {
 }
 .social-slide:hover {
     background-position: 0px -48px;
-    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.8);
+    /*box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.8);*/
 }
 body {
     -webkit-animation: fadein 2s;
@@ -413,7 +414,6 @@ body {
     }
 }
 /* Firefox < 16 */
-
 @-moz-keyframes fadein {
     from {
         opacity: 0;
