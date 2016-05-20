@@ -250,11 +250,9 @@ p.card-text {
     font-size: 0.9em;
 }
 span.year {
-    color: #26a69a;
+    color: #e57373;
 }
-
 /* SOCIAL */
-
 @font-face {
     font-family: 'si';
     src: url('../img/social/socicon.eot');
@@ -310,9 +308,9 @@ span.year {
     height: 38px;
     line-height: 38px;
     font-size: 22px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     margin-right: 0px;
     color: #ffffff;
     /*background-color: #454545;*/
@@ -356,6 +354,19 @@ span.year {
 }
 .soc-youtube:before {
     content: 'r';
+}
+
+.soc-www{
+    background:#c0c0c0; 
+    border-radius:5px; 
+    padding:5px;
+}
+
+.soc-www:hover{
+
+    background:#d0d0d0;
+
+
 }
 
 /* Social in footer */
