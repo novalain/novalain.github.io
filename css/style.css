@@ -19,6 +19,7 @@ p#loading-text {
     font-weight: 300;
     font-size: 1.1em;
     color: #a0a0a0;
+    text-align:center;
     text-transform: uppercase;
 }
 body {
