@@ -371,6 +371,9 @@ span.year {
 
 /* Social in footer */
 
+.github-hover {
+    background-image: url('../img/social/github-hover.png');
+}
 .facebook-hover {
     background-image: url('../img/social/facebook-hover.png');
 }
