@@ -43,7 +43,7 @@ nav ul a,
 nav .brand-logo {
     color: white;
     font-size: 1em;
-    font-weight:200;
+    font-weight: 300;
 }
 .black-links {
     color: #444 !important;
@@ -59,7 +59,7 @@ nav .brand-logo {
 div#front-text-container {
     z-index: 999;
     opacity:1;
-    bottom: 85px;
+    bottom: 55px;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -68,9 +68,8 @@ div#front-text-container {
 }
 h2#front-text-1 {
     text-align: center;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 6.5em;
-
 }
 p#front-text-2 {
     color: white;
@@ -114,7 +113,7 @@ p {
     line-height: 2rem;
 }
 .button-collapse {
-    color: #e57373;
+    color: #039be5;
 }
 .parallax-container {
     min-height: 400px;
@@ -251,7 +250,7 @@ p.card-text {
     font-size: 0.9em;
 }
 span.year {
-    color: #e57373;
+    color: #039be5;
 }
 /* SOCIAL */
 @font-face {
