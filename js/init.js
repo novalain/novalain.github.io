@@ -35,6 +35,9 @@ $(window).scroll(function() {
 
 });
 
+function openModal(project){
+	$(project).openModal();
+}
 
 $(window).load(function() {
 	// Animate loader off screen
@@ -45,13 +48,24 @@ $(window).load(function() {
 // document ready
 (function($){
 
+	/*const elements = Array.from(document.getElementsByClassName('card-image'));
+	elements.forEach(el => {
+		el.addEventListener("click", project => {
+			alert(project);
+		})
+	});
+  	//$('#modal1').leanModal();
+	 ///$('#modal1').openModal();
+	$('.modal-trigger').leanModal();*/
+
+
 	//$(document).scrollTop(0);
 	windowHeight = $(window).height();
 
 	$('#index-banner').css('height', $(window).height());
 	$('.side-nav').css('height', windowHeight);
 
-	$(function(){	
+	$(function(){
 	  $('.button-collapse').sideNav();
 		$('.parallax').parallax();
 	}); // end of document ready

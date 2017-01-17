@@ -138,7 +138,35 @@
       <div id="projects" class="section">
         <div class="row">
 
-          <div class="col s12 center">
+
+          <!-- Modal Trigger -->
+
+          <!-- Modal Structure -->
+          <div id="sph" class="modal">
+            <div class="modal-content">
+              <h4>SPH Fluid JS</h4>
+              <p>A Lagrangian SPH Fluid created in JavaScript with ThreeJS as rendering framework. A Lagrangian SPH Fluid created in JavaScript with ThreeJS as rendering framework. </p>
+              <span class="year">2016</span>
+              <p class="card-text">
+                <b>Solo project</b><br/>
+                A project made in the course TNG022, Modelling and Simulation. This is a real-time fluid simulation in two dimensions using Navier-Stokes in combination with Smoothed Particle Hydrodynamics, rendered and calculated on the GPU using the marching cubes algorithm</p>
+              <ul>
+                <div class="chip">es6</div>
+                <div class="chip">fluid-simulation</div>
+                <div class="chip">navier-stokes</div>
+                </ul>
+            </div>
+
+            <!--<iframe width=700 height=500 src="http://novalain.github.io/SPH-Fluid-WebGL/">
+              <p>Your browser does not support iframes.</p>
+            </iframe>-->
+            <div class="modal-footer">
+              <a class=" modal-action modal-close waves-effect waves-green btn-flat">Done!</a>
+            </div>
+          </div>
+
+
+          <!--<div class="col s12 center">
             <h4 style="padding-bottom:10px;" class="header-in-section">Currently working on</h4>
           </div>
 
@@ -166,18 +194,20 @@
                 </ul>
               </div>
             </div>
-          </div>
+          </div>-->
 
           <!-- Item -->
           <div class="col s12 center">
-            <h4 class="header-in-section">Stuff I've done</h4>
-            <p>Visit my Github for more details about the projects</p>
+            <h4 class="header-in-section">Projects</h4>
+            <p>Visit my Github for details</p>
           </div>
 
           <!-- start -->
           <div class="col s12 m6 l4">
             <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
+              <div onclick="openModal('#sph')" class="card-image waves-effect waves-block waves-light">
+
+             <!-- <button data-target="modal1" class="btn modal-trigger">Modal</button>-->
                 <img class="activator" src="img/projects/sph_fluid_js.png">
               </div>
               <div class="card-content">
@@ -195,7 +225,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="card-reveal">
+              <!--<div class="card-reveal">
                 <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
                 <span class="year">2016</span>
                 <p class="card-text">
@@ -206,7 +236,7 @@
                   <div class="chip">fluid-simulation</div>
                   <div class="chip">navier-stokes</div>
                 </ul>
-              </div>
+              </div>-->
             </div>
           <!-- end -->
           </div>
