@@ -144,7 +144,7 @@
             <div class="modal-content">
               <b style="font-size:1.2em;">SPH Fluid Simulation</b>
               <p class="card-text">
-                <a href="lel">Code</a> - <a>Report</a> <br/>
+                <a href="lel">Source Code</a> - <a>Report</a> <br/>
                 In the course Modeling and Simulation, me and three other students implemented a real-time fluid simulation using Navier-Stokes together with Smoothed Particle Hydrodynamics. The fluid was firstly created in 2D, but was also extended to work in 3D using OpenCL libraries. The implementation was done in C++ and OpenGL using a grid system for optimized neighbour lookups. The rendering was done in 2D using the marching squares algorithm. I also ported parts of the project to JavaScript for fun, this demo can be found <a>here.</a></p>
                 <ul>
                   <div class="chip">C++</div>
@@ -154,17 +154,42 @@
                   <div class="chip">Numerical Solver</div>
                 </ul>
                 <!-- Ugly as f-ck, seriously framework..-->
-                <!-- <div style="padding-bottom:360px; max-width:640px; margin: 0 auto;" class="video-container"> -->
-                <div style="padding-bottom:360px;" class="video-container">
+                <div style="padding-bottom:360px; max-width:640px; margin: 0 auto;" class="video-container">
+                <!-- <div style="padding-bottom:360px;" class="video-container"> -->
                <!--  <div class="video-container"> -->
                   <iframe  src="//www.youtube.com/embed/28wnSENApnk?rel=0" frameborder="0" allowfullscreen></iframe>
                 </div>
-                
             </div>
             <div class="modal-footer">
               <a class=" modal-action modal-close waves-effect waves-green btn-flat">Done!</a>
             </div>
           </div>
+
+          <div id="desert-run" class="modal">
+            <div class="modal-content">
+              <b style="font-size:1.2em;">Desert Run</b>
+              <p class="card-text">
+                <a href="lel">Source Code</a><br/>
+                In the course Modeling and Simulation, me and three other students implemented a real-time fluid simulation using Navier-Stokes together with Smoothed Particle Hydrodynamics. The fluid was firstly created in 2D, but was also extended to work in 3D using OpenCL libraries. The implementation was done in C++ and OpenGL using a grid system for optimized neighbour lookups. The rendering was done in 2D using the marching squares algorithm. I also ported parts of the project to JavaScript for fun, this demo can be found <a>here.</a></p>
+                <ul>
+                  <div class="chip">C++</div>
+                  <div class="chip">OpenGL</div>
+                  <div class="chip">Physics</div>
+                  <div class="chip">Simulation</div>
+                  <div class="chip">Numerical Solver</div>
+                </ul>
+                <!-- Ugly as f-ck, seriously framework..-->
+                <div style="padding-bottom:360px; max-width:640px; margin: 0 auto;" class="video-container">
+                <!-- <div style="padding-bottom:360px;" class="video-container"> -->
+               <!--  <div class="video-container"> -->
+                  <iframe  src="//www.youtube.com/embed/adh0s0dEM6M?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <a class=" modal-action modal-close waves-effect waves-green btn-flat">Done!</a>
+            </div>
+          </div>
+
 
 
           <!--<div class="col s12 center">
@@ -200,60 +225,46 @@
           <!-- Item -->
           <div style="padding-bottom:20px;" class="col s12 center">
             <h4 class="header-in-section">Projects</h4>
-            <p>These are my most relevant projects, most of them are related to Computer Graphics.</p>
+            <p>These are my most relevant projects, mostly related to Computer Graphics.</p>
           </div>
 
           <!-- start -->
           <div class="col s12 m6 l4">
-            <div class="card">
-              <div onclick="openModalBox('#sph')" class="card-image waves-effect waves-block waves-light">
+            <div onclick="openModalBox('#sph', event)" class="card"
+>              <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="img/projects/fluid.jpg">
               </div>
-              <div onclick="openModalBox('#sph')" class="card-content">
+              <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">SPH Fluid Simulation<i class="material-icons right">more_vert</i></span>
-                <ul class="soc">
+                <!--<ul class="soc">
                   <li>
                     <a class="soc-github soc-icon-last" target="_blank" href="https://github.com/novalain/desert-run"></a>
                   </li>
-                  <!-- www -->
                   <li >
-                    <a target="_blank" onclick="lol()" href="http://novalain.github.io/SPH-Fluid-WebGL/" class="soc-icon-last soc-www">
-                      <img style="width:25px; height:25px;" src="img/social/external_link.png">
+                    <a target="_blank" href="http://novalain.github.io/SPH-Fluid-WebGL/" class="soc-icon-last soc-www">
+                      <img id="ext-link" style="width:25px; height:25px;" src="img/social/external_link.png">
                     </a>
-                  <!-- www end -->
                   </li>
-                </ul>
+                </ul>-->
               </div>
-              <!--<div class="card-reveal">
-                <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-                <span class="year">2016</span>
-                <p class="card-text">
-                  <b>Solo project</b><br/>
-                  A Lagrangian SPH Fluid created in JavaScript with ThreeJS as rendering framework.
-                <ul>
-                  <div class="chip">es6</div>
-                  <div class="chip">fluid-simulation</div>
-                  <div class="chip">navier-stokes</div>
-                </ul>
-              </div>-->
             </div>
           <!-- end -->
           </div>
 
           <!-- start -->
           <div class="col s12 m6 l4 ">
-            <div class="card">
+            <div onclick="openModalBox('#desert-run', event)" class="card">
               <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="img/projects/desertrun.png">
               </div>
               <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">Desert Run<i class="material-icons right">more_vert</i></span>
-                <ul class="soc">
+                <!-- <ul class="soc">
                   <li>
                     <a class="soc-github soc-icon-last" target="_blank" href="https://github.com/novalain/desert-run"></a>
                   </li>
-                </ul>
-              </div>
+                </ul> -->
+              </div><!--
               <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
                 <span class="year">2016</span>
@@ -265,7 +276,7 @@
                   <div class="chip">sprite-kit</div>
                   <div class="chip">procedural</div>
                 </ul>
-              </div>
+              </div>-->
             </div>
           <!-- end -->
           </div>
@@ -277,13 +288,13 @@
               </div>
               <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">Tetris AI<i class="material-icons right">more_vert</i></span>
-                <ul class="soc">
+                <!-- <ul class="soc">
                   <li>
                     <a class="soc-github soc-icon-last" target="_blank" href="https://github.com/novalain/TetrisAI"></a>
                   </li>
-                </ul> 
+                </ul>  -->
               </div>
-              <div class="card-reveal">
+              <!-- <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
                 <span class="year">2016</span>
                 <p class="card-text">
@@ -298,7 +309,7 @@
                   <div class="chip">genetic-algorithm</div>
                   <div class="chip">machine-learning</div>
                 </ul>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -513,7 +524,7 @@
                 <img class="activator" src="img/projects/torretz2.png">
               </div>
               <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Greedy Astronaut<i class="material-icons right">more_vert</i></span>
+                <span class="card-title activator grey-text text-darken-4">WebGL Space Game<i class="material-icons right">more_vert</i></span>
                 <ul class="soc">
                   <li>
                     <a class="soc-github soc-icon-last" target="_blank" href="https://github.com/oankarberg/TNM061-WebGL-3D-Space-Game"></a>
@@ -540,9 +551,9 @@
 
           <!-- Item -->
           <div style="padding-bottom:20px;" class="col s12 center">
-            <h4 class="header-in-section">Web/App and Other Projects</h4>
-            <p>Other projects that aren't that relevant anymore, most of them related to Web and App Development.</p>
-            <a id="old-button" onclick="showOldStuff()" class="waves-effect waves-light btn-large">Ok show me the old stuff</a>
+            <h4 class="header-in-section">Web/Apps and Other Projects</h4>
+            <p>Other projects that aren't that relevant anymore, mostly related to Web and App Development.</p>
+            <a id="old-button" onclick="showOldStuff()" class="waves-effect waves-light btn-large">Show me the old stuff</a>
           </div>
 
           <!-- Old projects begin -->

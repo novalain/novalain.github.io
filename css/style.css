@@ -478,3 +478,8 @@ body {
         opacity: 1;
     }
 }
+
+
+.card:hover{
+    opacity:0.9 !important;
+}

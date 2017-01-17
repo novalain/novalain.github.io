@@ -10,7 +10,10 @@ $(window).resize(function(){
     $('#index-banner').height(windowHeight);
 });
 
-function openModalBox(project){
+function openModalBox(project, e){
+	if (e.target.tagName.toLowerCase() === 'a' || e.target.id == 'ext-link') {
+		return;
+	}
 	$(project).openModal();
 }
 
