@@ -10,10 +10,18 @@ $(window).resize(function(){
     $('#index-banner').height(windowHeight);
 });
 
+function openModalBox(project){
+	$(project).openModal();
+}
+
+function showOldStuff(){
+	document.getElementById('old-projects').style.display = "block";
+	document.getElementById('old-button').classList.add("disabled");
+}
 // listen for events while scrolling, change color of banner when a certain 
 // threshold is reached
 $(window).scroll(function() {
-	  
+
 	var scroll = $(window).scrollTop();
 
 	$('.arrow').css({'opacity':( fadeTextThreshold - scroll )/fadeTextThreshold});
@@ -34,10 +42,6 @@ $(window).scroll(function() {
 	}
 
 });
-
-function openModal(project){
-	$(project).openModal();
-}
 
 $(window).load(function() {
 	// Animate loader off screen

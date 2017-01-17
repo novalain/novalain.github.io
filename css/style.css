@@ -26,6 +26,18 @@ body {
     background: #f5f5f5;
 }
 
+.modal { width: 70% !important; max-height: 95% !important;  top:3% !important;}
+
+div#old-projects {
+    display:none;
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 /*Top banner*/
 
 #main-nav {

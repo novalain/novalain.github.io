@@ -41,8 +41,8 @@
           </li>
           <li><a class="nav-link" href="#contact">Contact</a>
           </li>
-          <li><a class="nav-link" target="_blank" href="http://www.singapore.michaelnoven.se">Singapore Blog</a>
-          </li>
+          <!--<li><a class="nav-link" target="_blank" href="http://www.singapore.michaelnoven.se">Singapore Blog</a>
+          </li>-->
         </ul>
         <ul id="nav-mobile" class="side-nav">
           <li><a href="#about">About</a>
@@ -84,7 +84,7 @@
           <div class="col s12 m6 offset-m3 center">
             <h4 class="header-in-section">Welcome</h4>
             <p>I'm an Engineering Student and Software Developer from Gothenburg, Sweden.
-              I have a huge passion for coding and creating cool things.</p>
+              I love coding and creating cool things.</p>
           </div>
         </div>
 
@@ -115,7 +115,7 @@
                   <img class="center" style="height:70px;"src="img/liu.png"/>
                 </h2>
               <!-- <h5 class="center">Easy to work with</h5> -->
-              <p class="light center">Currently pursuing my Master of Science in Media Technology and Engineering at Linköping University with focus on Computer Graphics, Parallel Computing and AI.</p>
+              <p class="light center">Currently pursuing my Master of Science in Media Technology and Engineering at Linköping University with focus on Computer Graphics.</p>
             </div>
           </div>
         </div>
@@ -137,29 +137,30 @@
     <div class="container">
       <div id="projects" class="section">
         <div class="row">
-
-
           <!-- Modal Trigger -->
 
           <!-- Modal Structure -->
           <div id="sph" class="modal">
             <div class="modal-content">
-              <h4>SPH Fluid JS</h4>
-              <p>A Lagrangian SPH Fluid created in JavaScript with ThreeJS as rendering framework. A Lagrangian SPH Fluid created in JavaScript with ThreeJS as rendering framework. </p>
-              <span class="year">2016</span>
+              <b style="font-size:1.2em;">SPH Fluid Simulation</b>
               <p class="card-text">
-                <b>Solo project</b><br/>
-                A project made in the course TNG022, Modelling and Simulation. This is a real-time fluid simulation in two dimensions using Navier-Stokes in combination with Smoothed Particle Hydrodynamics, rendered and calculated on the GPU using the marching cubes algorithm</p>
-              <ul>
-                <div class="chip">es6</div>
-                <div class="chip">fluid-simulation</div>
-                <div class="chip">navier-stokes</div>
+                <a href="lel">Code</a> - <a>Report</a> <br/>
+                In the course Modeling and Simulation, me and three other students implemented a real-time fluid simulation using Navier-Stokes together with Smoothed Particle Hydrodynamics. The fluid was firstly created in 2D, but was also extended to work in 3D using OpenCL libraries. The implementation was done in C++ and OpenGL using a grid system for optimized neighbour lookups. The rendering was done in 2D using the marching squares algorithm. I also ported parts of the project to JavaScript for fun, this demo can be found <a>here.</a></p>
+                <ul>
+                  <div class="chip">C++</div>
+                  <div class="chip">OpenGL</div>
+                  <div class="chip">Physics</div>
+                  <div class="chip">Simulation</div>
+                  <div class="chip">Numerical Solver</div>
                 </ul>
+                <!-- Ugly as f-ck, seriously framework..-->
+                <!-- <div style="padding-bottom:360px; max-width:640px; margin: 0 auto;" class="video-container"> -->
+                <div style="padding-bottom:360px;" class="video-container">
+               <!--  <div class="video-container"> -->
+                  <iframe  src="//www.youtube.com/embed/28wnSENApnk?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                
             </div>
-
-            <!--<iframe width=700 height=500 src="http://novalain.github.io/SPH-Fluid-WebGL/">
-              <p>Your browser does not support iframes.</p>
-            </iframe>-->
             <div class="modal-footer">
               <a class=" modal-action modal-close waves-effect waves-green btn-flat">Done!</a>
             </div>
@@ -197,28 +198,26 @@
           </div>-->
 
           <!-- Item -->
-          <div class="col s12 center">
+          <div style="padding-bottom:20px;" class="col s12 center">
             <h4 class="header-in-section">Projects</h4>
-            <p>Visit my Github for details</p>
+            <p>These are my most relevant projects, most of them are related to Computer Graphics.</p>
           </div>
 
           <!-- start -->
           <div class="col s12 m6 l4">
             <div class="card">
-              <div onclick="openModal('#sph')" class="card-image waves-effect waves-block waves-light">
-
-             <!-- <button data-target="modal1" class="btn modal-trigger">Modal</button>-->
-                <img class="activator" src="img/projects/sph_fluid_js.png">
+              <div onclick="openModalBox('#sph')" class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="img/projects/fluid.jpg">
               </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">SPH Fluid JS<i class="material-icons right">more_vert</i></span>
+              <div onclick="openModalBox('#sph')" class="card-content">
+                <span class="card-title activator grey-text text-darken-4">SPH Fluid Simulation<i class="material-icons right">more_vert</i></span>
                 <ul class="soc">
                   <li>
                     <a class="soc-github soc-icon-last" target="_blank" href="https://github.com/novalain/desert-run"></a>
                   </li>
                   <!-- www -->
                   <li >
-                    <a target="_blank" href="http://novalain.github.io/SPH-Fluid-WebGL/" class="soc-icon-last soc-www">
+                    <a target="_blank" onclick="lol()" href="http://novalain.github.io/SPH-Fluid-WebGL/" class="soc-icon-last soc-www">
                       <img style="width:25px; height:25px;" src="img/social/external_link.png">
                     </a>
                   <!-- www end -->
@@ -303,41 +302,6 @@
             </div>
           </div>
 
-          <div class="col s12 m6 l4 ">
-            <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="img/projects/nusanswers_logo.png">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">NUSAnswers<i class="material-icons right">more_vert</i></span>
-                <ul class="soc">
-                  <!-- www -->
-                  <li >
-                    <a target="_blank" href="http://www.nusanswers.com/" class="soc-icon-last soc-www">
-                      <img style="width:25px; height:25px;" src="img/social/external_link.png">
-                    </a>
-                  <!-- www end -->
-                  </li>
-                  <li>
-                    <a class="soc-github soc-icon-last" target="_blank" href="https://github.com/novalain/nusanswers"></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-                <span class="year">2016</span>
-                <p class="card-text">
-                  <b>Front-end, UI/UX Design</b><br/>
-                  We built a discussion forum like Quora for the university. The purpose of this website is for the students to have place to ask all kinds of questions related to the university. Features such as a dynamic search field with search rankings for easy access of questions and an infinite scroll for optimization purposes were implemented.
-                </p>
-                <ul>
-                  <div class="chip">angularjs</div>
-                  <div class="chip">social-forum</div>
-                  <div class="chip">full-stack</div>
-                </ul>
-              </div>
-            </div>
-          </div>
 
           <div class="col s12 m6 l4 ">
             <div class="card">
@@ -383,36 +347,7 @@
           <!-- Item end -->
           </div>
 
-          <!-- Item Begin -->
-          <div class="col s12 m6 l4">
-            <div class="card ">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="img/projects/drone.jpg">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Flying Cameraman<i class="material-icons right">more_vert</i></span>
-                <ul class="soc">
-                  <li>
-                    <a class="soc-github soc-icon-last" target="_blank" href="https://github.com/novalain/deffjean-hacknroll2016"></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-                <span class="year">2016</span>
-                <p class="card-text">
-                  <b>UI Designer, Network/Node Developer</b><br/>
-                  A project made at Hack&Roll16 and winner of the prize Best Use of Hardware. We established an intuitive control of a quadracopter with the help of leap motion. We also used a Raspberry Pi to broadcast a live video feed.
-                <ul>
-                  <div class="chip">leap-motion</div>
-                  <div class="chip">hardware</div>
-                  <div class="chip">node.js</div>
-                  <div class="chip">linux</div>
-                </ul>
-              </div>
-            </div>
-          <!-- Item end -->
-          </div>
+
 
           <!-- Item Begin -->
           <div class="col s12 m6 l4">
@@ -444,40 +379,6 @@
           </div>
 
           <!-- Item begin -->
-          <div class="col s12 m6 l4">
-            <div class="card ">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="img/projects/green-village.jpg">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Green Village<i class="material-icons right">more_vert</i></span>
-                <ul class="soc">
-                  <!-- play -->
-                  <li>
-                    <a target="_blank" href="https://play.google.com/store/apps/details?id=se.mobilestorytelling.green_village&hl=sv" class="soc-icon-last soc-www">
-                      <img style="width:25px; height:25px;" src="img/social/google_play.png">
-                    </a>
-                  <!-- play end -->
-                  </li>
-                </ul>
-              </div>
-
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-                <span class="year">2015</span>
-
-                <p class="card-text">
-                  <b>Solo project</b><br/>
-                  A hybrid app I made during my time at Mobile Storytelling for people living in the residential area Green Village. The residents can see the next incoming bus or train and check the current weather in the area. They can also control their audio speakers and lights at home wirelessly through the app. I also built the backend part for the users to be able to log in.</p>
-                <ul>
-                  <div class="chip">cordova</div>
-                  <div class="chip">angularjs</div>
-                  <div class="chip">php</div>
-                  <div class="chip">sql</div>
-                </ul>
-              </div>
-            </div>
-          </div>
 
           <div class="col s12 m6 l4 ">
             <div class="card">
@@ -518,6 +419,7 @@
             </div>
           </div>
 
+          <!-- FLUID REMOVE LATER
           <div class="col s12 m6 l4 ">
             <div class="card">
               <div class="card-image waves-effect waves-block waves-light">
@@ -547,8 +449,9 @@
                 </ul>
               </div>
             </div>
-          </div>
+          </div>-->
 
+          <!--
           <div class="col s12 m6 l4 ">
             <div class="card">
               <div class="card-image waves-effect waves-block waves-light">
@@ -574,8 +477,7 @@
                 </ul>
               </div>
             </div>
-          </div>
-
+          </div>-->
 
           <div class="col s12 m6 l4">
             <div class="card">
@@ -608,7 +510,7 @@
           <div class="col s12 m6 l4 ">
             <div class="card">
               <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="img/projects/torretz.jpg">
+                <img class="activator" src="img/projects/torretz2.png">
               </div>
               <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">Greedy Astronaut<i class="material-icons right">more_vert</i></span>
@@ -636,8 +538,85 @@
             </div>
           </div>
 
-          <div class="col s12 m6 l4 ">
-            <div class="card">
+          <!-- Item -->
+          <div style="padding-bottom:20px;" class="col s12 center">
+            <h4 class="header-in-section">Web/App and Other Projects</h4>
+            <p>Other projects that aren't that relevant anymore, most of them related to Web and App Development.</p>
+            <a id="old-button" onclick="showOldStuff()" class="waves-effect waves-light btn-large">Ok show me the old stuff</a>
+          </div>
+
+          <!-- Old projects begin -->
+          <div id="old-projects">
+
+              <!-- Item Begin -->
+            <div class="col s12 m6 l4">
+              <div class="card ">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="img/projects/drone.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Flying Cameraman<i class="material-icons right">more_vert</i></span>
+                  <ul class="soc">
+                    <li>
+                      <a class="soc-github soc-icon-last" target="_blank" href="https://github.com/novalain/deffjean-hacknroll2016"></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                  <span class="year">2016</span>
+                  <p class="card-text">
+                    <b>UI Designer, Network/Node Developer</b><br/>
+                    A project made at Hack&Roll16 and winner of the prize Best Use of Hardware. We established an intuitive control of a quadracopter with the help of leap motion. We also used a Raspberry Pi to broadcast a live video feed.
+                  <ul>
+                    <div class="chip">leap-motion</div>
+                    <div class="chip">hardware</div>
+                    <div class="chip">node.js</div>
+                    <div class="chip">linux</div>
+                  </ul>
+                </div>
+              </div>
+            <!-- Item end -->
+            </div>
+
+            <div class="col s12 m6 l4 ">
+               <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="img/projects/nusanswers_logo.png">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">NUSAnswers<i class="material-icons right">more_vert</i></span>
+                  <ul class="soc">
+                    <!-- www -->
+                    <li >
+                      <a target="_blank" href="http://www.nusanswers.com/" class="soc-icon-last soc-www">
+                        <img style="width:25px; height:25px;" src="img/social/external_link.png">
+                      </a>
+                    <!-- www end -->
+                    </li>
+                    <li>
+                      <a class="soc-github soc-icon-last" target="_blank" href="https://github.com/novalain/nusanswers"></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                  <span class="year">2016</span>
+                  <p class="card-text">
+                    <b>Front-end, UI/UX Design</b><br/>
+                    We built a discussion forum like Quora for the university. The purpose of this website is for the students to have place to ask all kinds of questions related to the university. Features such as a dynamic search field with search rankings for easy access of questions and an infinite scroll for optimization purposes were implemented.
+                  </p>
+                  <ul>
+                    <div class="chip">angularjs</div>
+                    <div class="chip">social-forum</div>
+                    <div class="chip">full-stack</div>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 m6 l4 ">
+              <div class="card">
               <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="img/projects/fft.jpg">
               </div>
@@ -660,6 +639,41 @@
                   <div class="chip">matlab</div>
                   <div class="chip">fft</div>
                   <div class="chip">physics</div>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l4">
+            <div class="card ">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="img/projects/green-village.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Green Village<i class="material-icons right">more_vert</i></span>
+                <ul class="soc">
+                  <!-- play -->
+                  <li>
+                    <a target="_blank" href="https://play.google.com/store/apps/details?id=se.mobilestorytelling.green_village&hl=sv" class="soc-icon-last soc-www">
+                      <img style="width:25px; height:25px;" src="img/social/google_play.png">
+                    </a>
+                  <!-- play end -->
+                  </li>
+                </ul>
+              </div>
+
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                <span class="year">2015</span>
+
+                <p class="card-text">
+                  <b>Solo project</b><br/>
+                  A hybrid app I made during my time at Mobile Storytelling for people living in the residential area Green Village. The residents can see the next incoming bus or train and check the current weather in the area. They can also control their audio speakers and lights at home wirelessly through the app. I also built the backend part for the users to be able to log in.</p>
+                <ul>
+                  <div class="chip">cordova</div>
+                  <div class="chip">angularjs</div>
+                  <div class="chip">php</div>
+                  <div class="chip">sql</div>
                 </ul>
               </div>
             </div>
@@ -693,7 +707,10 @@
             </div>
           </div>
 
-          
+
+
+
+          </div>
         <!-- Row end -->
         </div>
       <!-- Projects end -->
@@ -710,8 +727,7 @@
         <div class="col s12">
           <h5 id="contact">Contact</h5>
           <a href="mailto:michael.f.noven@gmail.com"><div style="margin-left:0px !important;" class="email-hover social-slide"></div></a>
-          <a target="_blank" href="https://www.facebook.com/michael.noven.9"><div class="facebook-hover social-slide"></div></a>
-          <a target="_blank" href="https://twitter.com/noveeen"><div class="twitter-hover social-slide"></div></a>
+          <!--<a target="_blank" href="https://twitter.com/noveeen"><div class="twitter-hover social-slide"></div></a>-->
           <a target="_blank" href="https://www.linkedin.com/in/mnoven"><div class="linkedin-hover social-slide"></div></a>
           <a target="_blank" href="https://github.com/novalain"><div class="github-hover social-slide"></div></a>
           <!-- <a target="_blank" href="https://www.instagram.com/novalain/"><div class="instagram-hover social-slide"></div></a> -->
