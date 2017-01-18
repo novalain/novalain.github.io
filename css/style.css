@@ -258,9 +258,12 @@ p.thought:after {
 .card-title {
     font-size: 1.3em !important;
 }
+
 p.card-text {
     font-size: 0.9em;
+    line-height:1.8 !important;
 }
+
 span.year {
     color: #039be5;
 }
