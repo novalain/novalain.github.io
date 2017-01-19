@@ -267,8 +267,16 @@ ul {
 p.card-text {
     margin-top:10px !important;
     margin-bottom:10px !important;
-    font-size: 0.9em;
+    font-size: 0.9em !important;
     line-height:1.8 !important;
+}
+
+.video-container {
+    padding-bottom:360px !important;
+    max-width:640px !important;
+    margin-left: auto !important;
+    margin-right:auto !important;
+    margin-top:15px !important;
 }
 
 span.year {

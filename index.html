@@ -95,8 +95,8 @@
               <h2 style="line-height:0;" class="center brown-text">
                   <img class="center"style="height:70px;"src="img/nasa.png"/>
                 </h2>
-              <p class="light center">Will conduct my Master's thesis at NASA's Goddard Space Flight Center in Greenbelt, Maryland by working on the 
-              project <a target="_blank" href="http://openspace.itn.liu.se/">Open Space.</a></p>
+              <p class="light center">Will conduct my Master's thesis at NASA's Goddard Space Flight Center in Greenbelt, Maryland from February 2017 by working on the
+              project <a target="_blank" href="http://openspace.itn.liu.se/">OpenSpace.</a></p>
             </div>
           </div>
           <div class="col s12 m6 l3">
@@ -153,7 +153,7 @@
             <div class="modal-content">
               <b style="font-size:1.2em;">Monte-Carlo Ray Tracer</b>
               <p class="card-text">
-                <a href="https://github.com/novalain/gi-ray" target="_blank">Source Code</a><br/>
+                <a href="https://github.com/novalain/gi-ray" target="_blank">Source Code</a></p>
                 <ul>
                   <div class="chip">C++</div>
                   <div class="chip">Global Illumination</div>
@@ -163,7 +163,10 @@
                 <p class="card-text">
                   This is a Monte-Carlo Path Tracer made in the course Advanced Global Rendering and Illumination at Linköping University by me and another student. This implementation solves the rendering equation using Monte-Carlo integration by supersampling each pixel. This is still an ongoing project where some of the current implemented features are: <i>Explicit light sampling, Ray-triangle intersection with Möller Trumbore, Area and point lights, Ray-sphere intersection, Loader for .obj, Multi-threading and Lambertian, Specular and Transparent BRDFs</i>. The resulting image is generated using 10,000 samples with a ray depth of 7.
                  </p>
-                  <img style="display:block; margin: 0 auto;width:512px;" src="img/projects/res_montecarlo.png">
+
+                    <img class="responsive-img" style="margin: 0 auto; display:block;" src="img/projects/res_montecarlo.png">
+                    <!-- <img style="margin-left:10px; width:256px;" src="img/projects/res_montecarlo2.png"> -->
+                  
             </div>
             <div class="modal-footer">
               <a class=" modal-action modal-close waves-effect waves-green btn-flat">Done!</a>
@@ -175,7 +178,7 @@
             <div class="modal-content">
               <b style="font-size:1.2em;">Maya Hair Plug-in</b>
               <p class="card-text">
-                <a href="https://github.com/Carlbaum/MayaFurPlugin" target="_blank">Source Code</a><br/>
+                <a href="https://github.com/Carlbaum/MayaFurPlugin" target="_blank">Source Code</a></p>
                 <ul>
                   <div class="chip">C++</div>
                   <div class="chip">Maya API</div>
@@ -186,7 +189,7 @@
                 <p class="card-text">
                   In the course SFX - Tricks of the Trade, me and two other students created a plug-in to Maya using their C++ API with the purpose of simulating and rendering realistic hair. The implementation is based on the paper <a href="https://pdfs.semanticscholar.org/aad3/f246c97962540cfcb1a0e1e58ac285b998e6.pdf" target="_blank">A Mass Spring Model for Hair Simulation</a> by Selle et al. The strands were created as Nurbs Curves in Maya, uniformly attached to a sphere and connected to the plug-in using a MEL script. In the plug-in we introduced different types of springs such as altitude and torsion springs to mimic the real behaviour of hair together with a forward Euler time step connected to the time slider in Maya. The rendering of the hair was done using the Arnold ray tracer introduced in Maya 2017 and the final result is using 30,000 strands.
                  </p>
-                  <div style="padding-bottom:360px; max-width:640px; margin: 0 auto;" class="video-container">
+                  <div class="video-container">
                   <!-- <div style="padding-bottom:360px;" class="video-container"> -->
                  <!--  <div class="video-container"> -->
                     <iframe src="https://player.vimeo.com/video/196069277" frameborder="0" allowfullscreen></iframe>
@@ -203,7 +206,7 @@
             <div class="modal-content">
               <b style="font-size:1.2em;">Procedural Water Shading in Real-time</b>
               <p class="card-text">
-                <a target="_blank" href="https://github.com/novalain/procedural-water">Source Code</a> - <a target="_blank" href="reports/procedural-water.pdf">Report</a> - <a target="_blank" href="https://novalain.github.io/procedural-water/">Demo</a><br/>
+                <a target="_blank" href="https://github.com/novalain/procedural-water">Source Code</a> - <a target="_blank" href="reports/procedural-water.pdf">Report</a> - <a target="_blank" href="https://novalain.github.io/procedural-water/">Demo</a></p>
                 <ul>
                   <div class="chip">GLSL</div>
                   <div class="chip">WebGL</div>
@@ -215,7 +218,7 @@
                   This is an individual project in the course Procedural Methods for Images at Linköping University where I created procedurally generated water and terrain without using any textures, completely in GLSL. The ripples of the water and the noise of the terrain are generated with the help of Simplex Noise and the terrain and bottom are created with a 2D Gaussian function. The reflection and refraction are generated using multi pass rendering with clipping planes together with projective texturing. A simplified Fresnel effect was implemented to generate more reflection when looking parallel to the surface plane. Phong lightning model are applied to perturbed normals by recalculating them using the gradient of the noise function in object space. I also implemented a GUI to be able to tweak some of the parameters in real time, see the report for all details. A live demo can be found <a href="https://novalain.github.io/procedural-water/" target="_blank">here</a>.
                 </p>
                 <!-- Ugly as f-ck, seriously framework..-->
-                 <div style="padding-bottom:360px; max-width:640px; margin: 0 auto;" class="video-container">
+                 <div class="video-container">
                 <!-- <div style="padding-bottom:360px;" class="video-container"> -->
                <!--  <div class="video-container"> -->
                   <iframe  src="//www.youtube.com/embed/bjtehkHXgFY?rel=0" frameborder="0" allowfullscreen></iframe>
@@ -231,7 +234,7 @@
             <div class="modal-content">
               <b style="font-size:1.2em;">SPH Fluid Simulation</b>
               <p class="card-text">
-                <a target="_blank" href="https://github.com/RiiQQe/Modelleringsprojekt">Source Code</a> - <a href="reports/sph.pdf" target="_blank">Report</a> <br/>
+                <a target="_blank" href="https://github.com/RiiQQe/Modelleringsprojekt">Source Code</a> - <a href="reports/sph.pdf" target="_blank">Report</a> </p>
                 <ul>
                   <div class="chip">C++</div>
                   <div class="chip">OpenGL</div>
@@ -239,9 +242,10 @@
                   <div class="chip">Simulation</div>
                   <div class="chip">Numerical Solver</div>
                 </ul>
+              <p class="card-text">
                 In the course Modeling and Simulation at Linköping University, me and three other students implemented a real-time fluid simulation using Navier-Stokes together with Smoothed Particle Hydrodynamics. The fluid was firstly created in 2D, but was also extended to work in 3D using OpenCL libraries. The implementation was done in C++ and OpenGL using a grid system for optimized neighbour lookups. The rendering was done in 2D using the marching squares algorithm. I also ported parts of the project to JavaScript for fun, this demo can be found <a>here.</p>
                 <!-- Ugly as f-ck, seriously framework..-->
-                <div style="padding-bottom:360px; max-width:640px; margin: 0 auto;" class="video-container">
+                <div class="video-container">
                 <!-- <div style="padding-bottom:360px;" class="video-container"> -->
                <!--  <div class="video-container"> -->
                   <iframe  src="//www.youtube.com/embed/28wnSENApnk?rel=0" frameborder="0" allowfullscreen></iframe>
@@ -256,16 +260,17 @@
             <div class="modal-content">
               <b style="font-size:1.2em;">Desert Run</b>
               <p class="card-text">
-                <a href="lel">Source Code</a><br/>
+                <a href="lel">Source Code</a></p>
                 <ul>
                   <div class="chip">Swift</div>
                   <div class="chip">SpriteKit</div>
                   <div class="chip">iOS Development</div>
                 </ul>
+              <p class="card-text">
                   I wanted to play around with Swift and learn how to develop games in Xcode with the help of SpriteKit for iOS devices as an individual project. The result is an endless runner where the aim is to collect as much money as possible before running into any of the obstacles. The environment is procedurally generated by recreating and randomizing objects by a fixed interval. The assets are taken from <a target="_blank" href="http://cartoonsmart.com">cartoonsmart.com</a>
               </p>
                 <!-- Ugly as f-ck, seriously framework..-->
-                <div style="padding-bottom:360px; max-width:640px; margin: 0 auto;" class="video-container">
+                <div class="video-container">
                 <!-- <div style="padding-bottom:360px;" class="video-container"> -->
                <!--  <div class="video-container"> -->
                   <iframe src="//www.youtube.com/embed/adh0s0dEM6M?rel=0" frameborder="0" allowfullscreen></iframe>
@@ -280,12 +285,13 @@
             <div class="modal-content">
               <b style="font-size:1.2em;">AI using Genetic Algorithms</b>
               <p class="card-text">
-                <a href="https://github.com/novalain/TetrisAI" target="_blank">Source Code</a> - <a target="_blank" href="reports/tetris.pdf">Report</a><br/>
+                <a href="https://github.com/novalain/TetrisAI" target="_blank">Source Code</a> - <a target="_blank" href="reports/tetris.pdf">Report</a></p>
                 <ul>
                   <div class="chip">Java</div>
                   <div class="chip">Genetic Algorithms</div>
                   <div class="chip">AI</div>
                 </ul>
+                <p class="card-text">
                   In this project me and three other students built a Tetris AI using an utility function based on a linear weighted sum of heuristics. The parameters for the heuristics were obtained by running a genetic algorithm and the AI improved its skill by replacing the current best values with new ones by running multiple evolutions on different threads.</p>
                 <p class="card-text">
                   A population was created with randomly generated unit vectors with a dimension of the number of heuristics which were: Number of Holes, Landing Height, Row Transitions, Column Transitions, Well Sums and Completed Lines. Each evolution the weakest 30% were replaced and each newly produced offspring had a 10% chance to mutate. The evolution was run until the fitness function gave the expected result. The AI managed to clear an average of ~2 million lines per game.
@@ -300,21 +306,23 @@
 
           <div id="vengeance-rising" class="modal">
             <div class="modal-content">
-              <b style="font-size:1.2em;">Vengeance Rising</b>
-              <p class="card-text">
-                <a target="_blank" href="https://github.com/VengeanceRising/VengeanceRising">Source Code</a> - <a target="_blank" href="http://vengeancerising.github.io">Web site</a><br/>
+              <b style="font-size:1.2em;">Vengeance Rising</b><br/>
+                <p class="card-text"><a target="_blank" href="https://github.com/VengeanceRising/VengeanceRising">Source Code</a> - <a target="_blank" href="http://vengeancerising.github.io">Web site</a>
+                </p>
                 <ul>
                   <div class="chip">Unreal Engine</div>
                   <div class="chip">Oculus Rift</div>
                   <div class="chip">Leap Motion</div>
                   <div class="chip">VR</div>
                 </ul>
-                  Vengeance Rising is a puzzle solving game made in Unreal Engine 4 and played with Oculus Rift together with Leap Motion in VR. This game was created in the course Game Development at National University of Singapore by me and five other students.</p>
+                <p class="card-text">
+                  Vengeance Rising is a puzzle solving game made in Unreal Engine 4 and played with Oculus Rift together with Leap Motion in VR. This game was created in the course Game Development at National University of Singapore by me and five other students.
+                </p>
                 <p class="card-text">
                   Some mechanics implemented were gaze and leap motion to interact with objects, inventory to keep track of found clues and hard puzzles that requires the user to think outside the box. Average play time to finish the game was ~30 min for a first-time player. I contributed by creating the dynamic lightning (Global Illumination), setting up the Leap Motion controller, programming some of the game mechanics, creating the web site and creating the trailer.
                 </p>
                   <!-- Ugly as f-ck, seriously framework..-->
-                  <div style="padding-bottom:360px; max-width:640px; margin: 0 auto;" class="video-container">
+                  <div class="video-container">
                   <!-- <div style="padding-bottom:360px;" class="video-container"> -->
                  <!--  <div class="video-container"> -->
                     <iframe src="//www.youtube.com/embed/r_u-zmEyLXE?rel=0" frameborder="0" allowfullscreen></iframe>
@@ -327,14 +335,15 @@
 
           <div id="mool-compiler" class="modal">
             <div class="modal-content">
-              <b style="font-size:1.2em;">mOOL Compiler</b>
+              <b style="font-size:1.2em;">mOOL Compiler</b><br/>
               <p class="card-text">
-                <a href="https://github.com/novalain/mOOL-compiler">Source Code</a> - <a target="_blank" href="reports/moang-report.pdf">Report</a><br/>
+                <a href="https://github.com/novalain/mOOL-compiler">Source Code</a> - <a target="_blank" href="reports/moang-report.pdf">Report</a></p>
                   <ul>
                     <div class="chip">Compiler Design</div>
                     <div class="chip">OCaml</div>
                     <div class="chip">Functional Programming</div>
                   </ul>
+                <p class="card-text">
                    This is a compiler written in OCaml for the language mOOL made in the module Compiler Design at the National University of Singapore. The phases implemented were: Lexical, Syntax and Semantic Analysis, Intermediate Code Generation, Code Optimization and Code Generation. The phases Lexical, Syntax and Semantic Analysis were individual and Intermediate Code Generation, Code Optimization and Code Generation were implemented together with two other students. The result became a working compiler for a light version mOOL where only class inheritance is missing. </p>
             </div>
             <div class="modal-footer">
@@ -346,7 +355,7 @@
             <div class="modal-content">
               <b style="font-size:1.2em;">Varsom Games</b>
               <p class="card-text">
-                <a target="_blank" href="https://github.com/novalain/Varsom-Games">Source Code</a> - <a target="_blank" href="reports/varsom-report.pdf">Report</a> - <a target="_blank" href="https://play.google.com/store/apps/details?id=com.varsom.system.android&hl=sv">Google Play</a><br/>
+                <a target="_blank" href="https://github.com/novalain/Varsom-Games">Source Code</a> - <a target="_blank" href="reports/varsom-report.pdf">Report</a> - <a target="_blank" href="https://play.google.com/store/apps/details?id=com.varsom.system.android&hl=sv">Google Play</a></p>
                   <ul>
                     <div class="chip">Java</div>
                     <div class="chip">LibGDX</div>
@@ -354,11 +363,12 @@
                     <div class="chip">Network</div>
                     <div class="chip">Game Development</div>
                   </ul>
+                  <p class="card-text">
                    This is my Bachelor Project created together with six other students where we developed a framework with the purpose of making players hook together and play video games on a tablet with their smartphones as controllers.  We also made a multiplayer car game for Android to illustrate the concept which is a multiplayer racing game with the goal of remaining inside the viewport  as long as possible while the camera tracks the leading car. The project was nominated to <a target="_blank" href="http://www.cawards.se/">C Awards</a> in the category best user interface.</p>
                    <p class="card-text">
                    The framework and game were developed in Java with the frameworks libGDX and KryoNet for the network part. I contributed mostly with the level design, game logic and mechanics, mechanics in menus and unit testing.
                    </p>
-                   <div style="padding-bottom:360px; max-width:640px; margin: 0 auto;" class="video-container">
+                   <div class="video-container">
                   <!-- <div style="padding-bottom:360px;" class="video-container"> -->
                  <!--  <div class="video-container"> -->
                     <iframe src="https://player.vimeo.com/video/135973861
@@ -385,7 +395,7 @@
                   </ul>
                    <p class="card-text"> A game made in the course 3D Computer Graphics by me and four other students. An Infinite Runner where you control a ship that jumps between platforms and collects coins. The more coins you collect the higher score you get. The top 10 highest scores are saved and updated on the server for everyone to see. I contributed with setting up the project, calculating game physics, programming game mechanics and saving highscores to database.</p>
                    <!-- Ugly as f-ck, seriously framework..-->
-                  <div style="padding-bottom:360px; max-width:640px; margin: 0 auto;" class="video-container">
+                  <div class="video-container">
                   <!-- <div style="padding-bottom:360px;" class="video-container"> -->
                  <!--  <div class="video-container"> -->
                     <iframe src="//www.youtube.com/embed/KBtkIkoQrZM?rel=0" frameborder="0" allowfullscreen></iframe>
@@ -429,7 +439,7 @@
           </div>-->
 
           <!-- Item -->
-          <div style="padding-bottom:20px;" class="col s12 center">
+          <div class="col s12 center">
             <h4 class="header-in-section">Projects</h4>
             <p>These are my most relevant and recent projects, mostly related to Computer Graphics.</p>
           </div>
@@ -438,7 +448,7 @@
           <div class="col s12 m6 l4">
             <div onclick="openModalBox('#gi-ray', event)" class="card">
               <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="img/projects/fluid.jpg">
+                <img class="activator" src="img/projects/monte.png">
               </div>
               <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">Monte-Carlo Ray Tracer<i class="material-icons right">more_vert</i></span>                <!--<ul class="soc">
@@ -460,7 +470,7 @@
           <div class="col s12 m6 l4">
             <div onclick="openModalBox('#hair-sim', event)" class="card">
               <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="img/projects/fluid.jpg">
+                <img class="activator" src="img/projects/maya.png">
               </div>
               <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">Maya Hair Plug-in<i class="material-icons right">more_vert</i></span>                <!--<ul class="soc">
@@ -482,10 +492,10 @@
           <div class="col s12 m6 l4">
             <div onclick="openModalBox('#procedural-water', event)" class="card">
               <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="img/projects/fluid.jpg">
+                <img class="activator" src="img/projects/watershading.png">
               </div>
               <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Procedural Water Shading in Real-time<i class="material-icons right">more_vert</i></span>
+                <span class="card-title activator grey-text text-darken-4">Procedural Water Shading <i class="material-icons right">more_vert</i></span>
                 <!--<ul class="soc">
                   <li>
                     <a class="soc-github soc-icon-last" target="_blank" href="https://github.com/novalain/desert-run"></a>
