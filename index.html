@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -187,7 +187,7 @@
                   <div class="chip">Numerical Solver</div>
                 </ul>
                 <p class="card-text">
-                  In the course SFX - Tricks of the Trade, me and two other students created a plug-in to Maya using their C++ API with the purpose of simulating and rendering realistic hair. The implementation is based on the paper <a href="https://pdfs.semanticscholar.org/aad3/f246c97962540cfcb1a0e1e58ac285b998e6.pdf" target="_blank">A Mass Spring Model for Hair Simulation</a> by Selle et al. The strands were created as Nurbs Curves in Maya, uniformly attached to a sphere and connected to the plug-in using a MEL script. In the plug-in we introduced different types of springs such as altitude and torsion springs to mimic the real behaviour of hair together with a forward Euler time step connected to the time slider in Maya. The rendering of the hair was done using the Arnold ray tracer introduced in Maya 2017 and the final result is using 30,000 strands.
+                  In the course SFX - Tricks of the Trade at Linköping University, me and two other students created a plug-in to Maya using their C++ API with the purpose of simulating and rendering realistic hair. The implementation is based on the paper <a href="https://pdfs.semanticscholar.org/aad3/f246c97962540cfcb1a0e1e58ac285b998e6.pdf" target="_blank">A Mass Spring Model for Hair Simulation</a> by Selle et al. The strands were created as Nurbs Curves in Maya, uniformly attached to a sphere and connected to the plug-in using a MEL script. In the plug-in we introduced different types of springs such as altitude and torsion springs to mimic the real behaviour of hair together with a forward Euler time step connected to the time slider in Maya. The rendering of the hair was done using the Arnold ray tracer introduced in Maya 2017 and the final result is using 30,000 strands.
                  </p>
                   <div class="video-container">
                   <!-- <div style="padding-bottom:360px;" class="video-container"> -->
@@ -215,7 +215,7 @@
                   <div class="chip">Real-time</div>
                 </ul>
                 <p class="card-text">
-                  This is an individual project in the course Procedural Methods for Images at Linköping University where I created procedurally generated water and terrain without using any textures, completely in GLSL. The ripples of the water and the noise of the terrain are generated with the help of Simplex Noise and the terrain and bottom are created with a 2D Gaussian function. The reflection and refraction are generated using multi pass rendering with clipping planes together with projective texturing. A simplified Fresnel effect was implemented to generate more reflection when looking parallel to the surface plane. Phong lightning model are applied to perturbed normals by recalculating them using the gradient of the noise function in object space. I also implemented a GUI to be able to tweak some of the parameters in real time, see the report for all details. A live demo can be found <a href="https://novalain.github.io/procedural-water/" target="_blank">here</a>.
+                  This is an individual project in the course Procedural Methods for Images at Linköping University where I created procedurally generated water and terrain without using any textures, completely in GLSL. The ripples of the water and the noise of the terrain are generated using Simplex Noise and the terrain and bottom are created with a 2D Gaussian function. The reflection and refraction are generated using multi pass rendering with clipping planes together with projective texturing. A simplified Fresnel effect was implemented to generate more reflection when looking parallel to the surface plane. Phong lightning model are applied to perturbed normals by recalculating them using the gradient of the noise function in object space. I also implemented a GUI to be able to tweak some of the parameters in real time, see the report for all details. A live demo can be found <a href="https://novalain.github.io/procedural-water/" target="_blank">here</a>.
                 </p>
                 <!-- Ugly as f-ck, seriously framework..-->
                  <div class="video-container">
@@ -243,7 +243,7 @@
                   <div class="chip">Numerical Solver</div>
                 </ul>
               <p class="card-text">
-                In the course Modeling and Simulation at Linköping University, me and three other students implemented a real-time fluid simulation using Navier-Stokes together with Smoothed Particle Hydrodynamics. The fluid was firstly created in 2D, but was also extended to work in 3D using OpenCL libraries. The implementation was done in C++ and OpenGL using a grid system for optimized neighbour lookups. The rendering was done in 2D using the marching squares algorithm. I also ported parts of the project to JavaScript for fun, this demo can be found <a>here.</p>
+                In the course Modeling and Simulation at Linköping University, me and three other students implemented a real-time fluid simulation from scratch, using Navier-Stokes together with Smoothed Particle Hydrodynamics. The fluid was at first created in 2D, but was then extended to work in 3D as well using OpenCL libraries. The implementation was mostly done in C++ and OpenGL using a grid system for optimized neighbour lookups. The rendering was done in 2D using the marching squares algorithm. I also ported parts of the project to JavaScript for fun, this demo can be found <a href="http://novalain.github.io/SPH-Fluid-WebGL/" target="_blank">here.</p>
                 <!-- Ugly as f-ck, seriously framework..-->
                 <div class="video-container">
                 <!-- <div style="padding-bottom:360px;" class="video-container"> -->
@@ -292,9 +292,9 @@
                   <div class="chip">AI</div>
                 </ul>
                 <p class="card-text">
-                  In this project me and three other students built a Tetris AI using an utility function based on a linear weighted sum of heuristics. The parameters for the heuristics were obtained by running a genetic algorithm and the AI improved its skill by replacing the current best values with new ones by running multiple evolutions on different threads.</p>
+                  In the course Introduction to Artificial Intelligence at National University of Singapore, me and three other students built a Tetris AI using an utility function based on a linear weighted sum of heuristics. The parameters for the heuristics were obtained by running a genetic algorithm and the AI improved its skill by replacing the current best values with new ones by running multiple evolutions on different threads. The pieces the AI gets are completely randomized. </p>
                 <p class="card-text">
-                  A population was created with randomly generated unit vectors with a dimension of the number of heuristics which were: Number of Holes, Landing Height, Row Transitions, Column Transitions, Well Sums and Completed Lines. Each evolution the weakest 30% were replaced and each newly produced offspring had a 10% chance to mutate. The evolution was run until the fitness function gave the expected result. The AI managed to clear an average of ~2 million lines per game.
+                  A population was first created with randomly generated unit vectors with a dimension of the number of heuristics which were: Number of Holes, Landing Height, Row Transitions, Column Transitions, Well Sums and Completed Lines. Each evolution the weakest 30% were replaced and each newly produced offspring had a 10% chance to mutate. The evolution was run until the fitness function gave a satisfying result. The AI managed to clear an average of ~2 million lines per game with the best found parameters, where the failure occurs when it gets unlucky, especially when it gets the same odd "Z" piece over and over again.
                 </p>
                   <img style="display:block; margin: 0 auto;width:100px;" src="img/projects/tetris_res.gif">
             </div>
@@ -319,7 +319,7 @@
                   Vengeance Rising is a puzzle solving game made in Unreal Engine 4 and played with Oculus Rift together with Leap Motion in VR. This game was created in the course Game Development at National University of Singapore by me and five other students.
                 </p>
                 <p class="card-text">
-                  Some mechanics implemented were gaze and leap motion to interact with objects, inventory to keep track of found clues and hard puzzles that requires the user to think outside the box. Average play time to finish the game was ~30 min for a first-time player. I contributed by creating the dynamic lightning (Global Illumination), setting up the Leap Motion controller, programming some of the game mechanics, creating the web site and creating the trailer.
+                  Some mechanics implemented were gaze and leap motion to interact with objects, inventory to keep track of found clues and hard puzzles that requires the user to think outside the box. Average play time to finish the game was ~30 min for a first-time player. I contributed by creating the dynamic lightning (Global Illumination), setting up the Leap Motion controller, programming some of the game mechanics, creating the web site and the trailer.
                 </p>
                   <!-- Ugly as f-ck, seriously framework..-->
                   <div class="video-container">
@@ -344,7 +344,7 @@
                     <div class="chip">Functional Programming</div>
                   </ul>
                 <p class="card-text">
-                   This is a compiler written in OCaml for the language mOOL made in the module Compiler Design at the National University of Singapore. The phases implemented were: Lexical, Syntax and Semantic Analysis, Intermediate Code Generation, Code Optimization and Code Generation. The phases Lexical, Syntax and Semantic Analysis were individual and Intermediate Code Generation, Code Optimization and Code Generation were implemented together with two other students. The result became a working compiler for a light version mOOL where only class inheritance is missing. </p>
+                   This is a compiler written in OCaml for the language mOOL (a subset of Java), made in the module Compiler Design at the National University of Singapore. The phases implemented were: <i>Lexical, Syntax and Semantic Analysis, Intermediate Code Generation, Code Optimization and Code Generation</i>. The phases <i>Lexical, Syntax and Semantic Analysis</i> were individual and <i>Intermediate Code Generation, Code Optimization and Code Generation</i> were implemented together with two other students. The result became a working compiler for a light version mOOL where only class inheritance is missing. The compiler is able to run on any ARM processor and tested on an Android emulator.</p>
             </div>
             <div class="modal-footer">
               <a class=" modal-action modal-close waves-effect waves-green btn-flat">Done!</a>
@@ -361,10 +361,10 @@
                     <div class="chip">LibGDX</div>
                     <div class="chip">Multiplayer</div>
                     <div class="chip">Network</div>
-                    <div class="chip">Game Development</div>
+                    <div class="chip">Cross Platform</div>
                   </ul>
                   <p class="card-text">
-                   This is my Bachelor Project created together with six other students where we developed a framework with the purpose of making players hook together and play video games on a tablet with their smartphones as controllers.  We also made a multiplayer car game for Android to illustrate the concept which is a multiplayer racing game with the goal of remaining inside the viewport  as long as possible while the camera tracks the leading car. The project was nominated to <a target="_blank" href="http://www.cawards.se/">C Awards</a> in the category best user interface.</p>
+                   This is my Bachelor Project at Linköping University created together with six other students. We developed a framework with the purpose of making players hook together and play video games on a tablet with their smartphones as controllers. We also made a multiplayer car game for Android to illustrate the concept which is a multiplayer racing game with the goal of remaining inside the viewport  as long as possible while the camera tracks the leading car. The project was nominated to <a target="_blank" href="http://www.cawards.se/">C Awards</a> in the category best user interface.</p>
                    <p class="card-text">
                    The framework and game were developed in Java with the frameworks libGDX and KryoNet for the network part. I contributed mostly with the level design, game logic and mechanics, mechanics in menus and unit testing.
                    </p>
@@ -393,7 +393,7 @@
                     <div class="chip">JavaScript</div>
                     <div class="chip">Game Development</div>
                   </ul>
-                   <p class="card-text"> A game made in the course 3D Computer Graphics by me and four other students. An Infinite Runner where you control a ship that jumps between platforms and collects coins. The more coins you collect the higher score you get. The top 10 highest scores are saved and updated on the server for everyone to see. I contributed with setting up the project, calculating game physics, programming game mechanics and saving highscores to database.</p>
+                   <p class="card-text"> A game made in the course 3D Computer Graphics by me and four other students in WebGL and JavaScript at my second year at the university. This is an Infinite Runner where a ship jumps between platforms and collects coins. The top 10 highest scores are saved and updated on the server for everyone to see. I contributed with setting up the project, calculating game physics, programming game mechanics and saving highscores to database.</p>
                    <!-- Ugly as f-ck, seriously framework..-->
                   <div class="video-container">
                   <!-- <div style="padding-bottom:360px;" class="video-container"> -->
@@ -441,7 +441,7 @@
           <!-- Item -->
           <div class="col s12 center">
             <h4 class="header-in-section">Projects</h4>
-            <p>These are my most relevant and recent projects, mostly related to Computer Graphics.</p>
+            <p>These are my most recent projects, mostly related to Computer Graphics.</p>
           </div>
 
           <!-- start -->
@@ -920,7 +920,7 @@
                 <span class="year">2014</span>
                 <p class="card-text">
                   <b>UI Designer, Javascript Developer</b><br/>
-                  A guitar tuner made in the course TFYA65, Physics of Sound. We developed the guitar tuner as a webapp in HTML5 using WebRTC for real-time communication with the browser and the Fast Fourier Transform algorithm for frequency detection. The tuner was first created in Matlab but was then rewritten in Javascript to give a more friendly user interface.</p>
+                  A guitar tuner made in the course TFYA65, Physics of Sound. We developed the guitar tuner as a webapp in HTML5 using WebRTC for real-time communication with the browser and a Fast Fourier Transform algorithm for frequency detection. The tuner was first created in Matlab but was then rewritten in Javascript to give a more friendly user interface.</p>
                 <ul>
                   <div class="chip">javascript</div>
                   <div class="chip">matlab</div>
