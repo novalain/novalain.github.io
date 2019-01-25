@@ -201,7 +201,8 @@ let mainText, projectText;
 let particleSize;
 let particleOffset = 1; // Must be 0?
 
-const TOP_OFFSET = 350;
+console.log(window.devicePixelRatio);
+const TOP_OFFSET = 720 / window.devicePixelRatio;
 
 let stopModalFromClosingFirstTime = false;
 
@@ -373,21 +374,24 @@ function loadParticleImage(texture, scale, posX, posY, shouldScale) {
 }
 
 function createImages(resources, shouldScale) {
-    const baseScale = 1.0 * Math.pow(window.devicePixelRatio, 0.6);
+    const baseScale = 1.0 * Math.pow(window.devicePixelRatio, 0.9);
     console.log("baseScale", baseScale);
-    const IMAGE_PADDING = 20 * Math.pow(window.devicePixelRatio, 2.0);
+    const IMAGE_PADDING = 15 * Math.pow(window.devicePixelRatio, 0.7);
     particleSize = 10;
 
-    console.log("dv", window.devicePixelRatio);
-    loadParticleImage(resources.nasa.texture, baseScale * 3.1, window.innerWidth / 2 - resources.mojang.texture.width / (baseScale * 4.5) / 2 - resources.nasa.texture.width / (baseScale * 3.2) - IMAGE_PADDING, TOP_OFFSET, shouldScale);
-    loadParticleImage(resources.mojang.texture, baseScale * 4.5, window.innerWidth / 2 - resources.mojang.texture.width / (baseScale * 4.5) / 2, TOP_OFFSET, shouldScale);
-    loadParticleImage(resources.opera.texture, baseScale * 4.5, window.innerWidth / 2 + resources.mojang.texture.width / (baseScale * 4.5) / 2 + IMAGE_PADDING, TOP_OFFSET, shouldScale);
+    const appWidth = document.documentElement.clientWidth;
+    const appHeight = document.documentElement.clientHeight;
 
-    loadParticleImage(resources.nl.texture, baseScale * 1.3, window.innerWidth / 2 - resources.ic.texture.width / (baseScale * 1) / 2 - resources.nl.texture.width / (baseScale * 1) / 2, 200 + TOP_OFFSET, shouldScale);
-    loadParticleImage(resources.ic.texture, baseScale * 1, IMAGE_PADDING + window.innerWidth / 2, 170 + TOP_OFFSET, shouldScale);
+    console.log("dv", window.devicePixelRatio);
+    loadParticleImage(resources.nasa.texture, baseScale * 3.1, appWidth / 2 - resources.mojang.texture.width / (baseScale * 4.5) / 2 - resources.nasa.texture.width / (baseScale * 3.2) - IMAGE_PADDING, TOP_OFFSET, shouldScale);
+    loadParticleImage(resources.mojang.texture, baseScale * 4.5, appWidth / 2 - resources.mojang.texture.width / (baseScale * 4.5) / 2, TOP_OFFSET, shouldScale);
+    loadParticleImage(resources.opera.texture, baseScale * 4.5, appWidth / 2 + resources.mojang.texture.width / (baseScale * 4.5) / 2 + IMAGE_PADDING, TOP_OFFSET, shouldScale);
+
+    loadParticleImage(resources.nl.texture, baseScale * 1.3, appWidth / 2 - resources.nl.texture.width / (baseScale * 1.3) / 1.3, resources.mojang.texture.height / (baseScale * 4.5) + TOP_OFFSET + IMAGE_PADDING, shouldScale);
+    loadParticleImage(resources.ic.texture, baseScale * 1, appWidth / 2 - resources.nl.texture.width / (baseScale * 1.3) / 1.3 + resources.nl.texture.width / (baseScale * 1.3) + IMAGE_PADDING, resources.mojang.texture.height / (baseScale * 4.5) + TOP_OFFSET + IMAGE_PADDING + 3, shouldScale);
     particleSize = 30;
     particleOffset = 1;
-    loadParticleImage(resources.project_voxel.texture, baseScale * 2, window.innerWidth / 2 - resources.project_voxel.texture.width / (baseScale * 2) / 2, 20, shouldScale);
+    loadParticleImage(resources.project_voxel.texture, baseScale * 2, appWidth / 2 - resources.project_voxel.texture.width / (baseScale * 2) / 2, TOP_OFFSET - resources.project_voxel.texture.height / (baseScale * 2) - 100, shouldScale);
 }
 
 function createFonts() {
@@ -405,18 +409,21 @@ function createFonts() {
     // projectText.y = 500;
     // projectText.x = window.innerWidth / 2 - projectText.width / 2;
 
+    const appWidth = document.documentElement.clientWidth;
+    const appHeight = document.documentElement.clientHeight;
+
     mainText = new PIXI.Text('Welcome', { fontFamily: 'Verdana', fontSize: 50, fontVariant: "small-caps", fill: 0xb5b5b5, align: 'center' });
-    mainText.y = TOP_OFFSET - 100;
-    mainText.x = window.innerWidth / 2 - mainText.width / 2;
+    mainText.y = TOP_OFFSET - 90;
+    mainText.x = appWidth / 2 - mainText.width / 2;
     mainText.alpha = 0.0;
     app.stage.addChild(mainText);
 
     projectText = new PIXI.Text('Projects', { fontFamily: 'Verdana', fontSize: 50, fontVariant: "small-caps", fill: 0xb5b5b5, align: 'center' });
     projectText.y = TOP_OFFSET + 320;
-    projectText.x = window.innerWidth / 2 - projectText.width / 2;
+    projectText.x = appWidth / 2 - projectText.width / 2;
     projectText.alpha = 0.0;
 
-    app.stage.addChild(projectText);
+    //app.stage.addChild(projectText);
 }
 
 // load the texture we need
@@ -424,8 +431,8 @@ PIXI.loader
     .add('nasa', 'assets/images/nasa.png')
     .add('mojang', 'assets/images/mojang.png')
     .add('opera', 'assets/images/operacropped.png')
-    .add('nl', 'assets/images/NL.png')
-    .add('ic', 'assets/images/IC.png')
+    .add('nl', 'assets/images/nl2.png')
+    .add('ic', 'assets/images/ic2.png')
     .add('project_voxel', 'assets/images/me.gif')
     .load((loader, resources) => {
 
