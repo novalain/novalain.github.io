@@ -424,8 +424,8 @@ PIXI.loader
     .add('nasa', 'assets/images/nasa.png')
     .add('mojang', 'assets/images/mojang.png')
     .add('opera', 'assets/images/operacropped.png')
-    .add('nl', 'assets/images/nl.png')
-    .add('ic', 'assets/images/ic.png')
+    .add('nl', 'assets/images/NL.png')
+    .add('ic', 'assets/images/IC.png')
     .add('project_voxel', 'assets/images/me.gif')
     .load((loader, resources) => {
 
