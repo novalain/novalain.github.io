@@ -11,7 +11,7 @@
 // - Font Rendering
 // - Projects
 
-const app = new PIXI.Application({ transparent: false, backgroundColor: '0xEEEEEEE' });
+const app = new PIXI.Application({ transparent: false, backgroundColor: '0x303030' });
 PIXI.utils.skipHello(); // remove pixi message in console log
 
 function setupTextParticles() {
@@ -56,6 +56,11 @@ function setupTextParticles() {
     });
 
     function setup() {
+
+        app.renderer.view.style.position = "absolute";
+        app.renderer.view.style.display = "block";
+        app.renderer.autoResize = true;
+        app.renderer.resize(window.innerWidth, window.innerHeight);
         colors = [settings.color1, settings.color2, settings.color3, settings.color4, settings.color5];
 
         textParticles = [];
@@ -202,7 +207,7 @@ let particleSize;
 let particleOffset = 1; // Must be 0?
 
 console.log(window.devicePixelRatio);
-const TOP_OFFSET = 720 / window.devicePixelRatio;
+let TOP_OFFSET = 200 * window.devicePixelRatio;// / window.devicePixelRatio;
 
 let stopModalFromClosingFirstTime = false;
 
@@ -263,11 +268,11 @@ class Particle {
 
         const distance = Math.sqrt(Math.pow(mouseX - this.sprite.x, 2) + Math.pow(mouseY - this.sprite.y, 2));
 
-        if (distance < 15) {
-            const accX = (mouseX - this.sprite.x);
+        if (distance < 30) {
+            const accX = (mouseX - this.sprite.x) * 1.0;
             this.speedX -= accX;
 
-            const accY = (mouseY - this.sprite.y);
+            const accY = (mouseY - this.sprite.y) * 1.0;
             this.speedY -= accY;
         }
 
@@ -374,24 +379,35 @@ function loadParticleImage(texture, scale, posX, posY, shouldScale) {
 }
 
 function createImages(resources, shouldScale) {
-    const baseScale = 1.0 * Math.pow(window.devicePixelRatio, 0.9);
-    console.log("baseScale", baseScale);
-    const IMAGE_PADDING = 15 * Math.pow(window.devicePixelRatio, 0.7);
-    particleSize = 10;
+    const baseScale = 1.3;// * Math.pow(window.devicePixelRatio, 0.9);
 
-    const appWidth = document.documentElement.clientWidth;
-    const appHeight = document.documentElement.clientHeight;
+    //console.log("baseScale", baseScale);
+    const IMAGE_PADDING = 55;// * Math.pow(window.devicePixelRatio, 0.7);
+    particleSize = 3;
+    particleOffset = 1;
 
+    const appWidth =  window.innerWidth;//document.documentElement.clientWidth;
+    const appHeight = window.innerHeight;//document.documentElement.clientHeight;
+
+
+    console.log("ClientWidth", appWidth);
+    console.log("Clientheight", appHeight);
+    console.log("Window width", window.innerWidth);
+    console.log("Window height", window.innerHeight);
     console.log("dv", window.devicePixelRatio);
+
+    TOP_OFFSET = resources.project_voxel.texture.height / (baseScale * 1.4);
     loadParticleImage(resources.nasa.texture, baseScale * 3.1, appWidth / 2 - resources.mojang.texture.width / (baseScale * 4.5) / 2 - resources.nasa.texture.width / (baseScale * 3.2) - IMAGE_PADDING, TOP_OFFSET, shouldScale);
     loadParticleImage(resources.mojang.texture, baseScale * 4.5, appWidth / 2 - resources.mojang.texture.width / (baseScale * 4.5) / 2, TOP_OFFSET, shouldScale);
+    //loadParticleImage(resources.mojang.texture, baseScale * 4.5, window.innerWidth / 2 - resources.mojang.texture.width / 2, TOP_OFFSET, shouldScale);
     loadParticleImage(resources.opera.texture, baseScale * 4.5, appWidth / 2 + resources.mojang.texture.width / (baseScale * 4.5) / 2 + IMAGE_PADDING, TOP_OFFSET, shouldScale);
 
     loadParticleImage(resources.nl.texture, baseScale * 1.3, appWidth / 2 - resources.nl.texture.width / (baseScale * 1.3) / 1.3, resources.mojang.texture.height / (baseScale * 4.5) + TOP_OFFSET + IMAGE_PADDING, shouldScale);
     loadParticleImage(resources.ic.texture, baseScale * 1, appWidth / 2 - resources.nl.texture.width / (baseScale * 1.3) / 1.3 + resources.nl.texture.width / (baseScale * 1.3) + IMAGE_PADDING, resources.mojang.texture.height / (baseScale * 4.5) + TOP_OFFSET + IMAGE_PADDING + 3, shouldScale);
+    loadParticleImage(resources.rovio.texture, baseScale * 1.7, appWidth / 2 - resources.rovio.texture.width / (baseScale * 1.3) / 2.5, resources.mojang.texture.height / (baseScale * 3.1) + TOP_OFFSET + IMAGE_PADDING + 20, shouldScale);
     particleSize = 30;
     particleOffset = 1;
-    loadParticleImage(resources.project_voxel.texture, baseScale * 2, appWidth / 2 - resources.project_voxel.texture.width / (baseScale * 2) / 2, TOP_OFFSET - resources.project_voxel.texture.height / (baseScale * 2) - 100, shouldScale);
+    loadParticleImage(resources.project_voxel.texture, baseScale * 2, appWidth / 2 - resources.project_voxel.texture.width / (baseScale * 2) / 2, TOP_OFFSET - resources.project_voxel.texture.height / (baseScale * 2) - 50, shouldScale);
 }
 
 function createFonts() {
@@ -416,7 +432,7 @@ function createFonts() {
     mainText.y = TOP_OFFSET - 90;
     mainText.x = appWidth / 2 - mainText.width / 2;
     mainText.alpha = 0.0;
-    app.stage.addChild(mainText);
+  //  app.stage.addChild(mainText);
 
     projectText = new PIXI.Text('Projects', { fontFamily: 'Verdana', fontSize: 50, fontVariant: "small-caps", fill: 0xb5b5b5, align: 'center' });
     projectText.y = TOP_OFFSET + 320;
@@ -434,12 +450,17 @@ PIXI.loader
     .add('nl', 'assets/images/nl2.png')
     .add('ic', 'assets/images/ic2.png')
     .add('project_voxel', 'assets/images/me.gif')
+    .add('rovio', 'assets/images/rovio_logo_news.png')
     .load((loader, resources) => {
 
         loadedResources = resources;
         // debugger;
         // resources.nasa.baseTexture.width = 20;
-        app.renderer.resize(window.innerWidth, 2000);
+        //app.renderer.resize(window.innerWidth, 2000);
+        app.renderer.view.style.position = "absolute";
+        app.renderer.view.style.display = "block";
+        app.renderer.autoResize = true;
+        app.renderer.resize(window.innerWidth, window.innerHeight);
         createImages(resources, true);
         createFonts();
         //setupTextParticles();
